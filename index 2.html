@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src = "js/jquery-3.3.1.js"></script>
+    <script src = "js/game.js"></script>
+    <script src = "js/items.js"></script>
+    <script src =  "js/monsters.js"></script>
+    <script src = "js/maps.js"></script>
+    <script src = "js/players.js"></script>
+    <script src = "js/scripts.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id = "titleScreen" class = "container wrapper">
+  <h1>#titleScreen .wrapper</h1>
+  <p>Hello players and welcome (when you eventually read this)... You are approached by three creatures of small stature. All similar in appearance, but each has a different symbol inscribed upon their "face" in a clumsy manner. If you were to guess you would assume it was probably done by a small child. One of the creatures approaches, and in a combined voice they say, "We are so glad we found you, we are here to deliver a message. Your response is requested immediately. We will await your response. "</p>
+  <button id = "startGame">Begin</button>
+</div>
+<div id = "preGameScreen" class = "container wrapper">
+<h1>#preGameScreen .wrapper</h1>
+<p>Dear Travelers of Great Renown,<br>
+  My name is Sir Jerroth of Stone Lake Keep, first officer to the Lady Hillinder of Stone Lake Keep. It is in these dire circumstances that I request your help. The Lady has been taken captive, and I stand accused of this horrible deed. I honorably await my trial, for I know that I remain innocent, but while I sit here waiting for judgement to fall, Lady Hillinder is taken farther from the safety of the keep.<br><br>
+  Please dear travelers, if you are the ones from the great tales, only you can help get her back. The Lady's captors were fleet of foot, but they seem to be slow of wit. Before I was detained I had enough time to write this message and hopefully leave a clue that could lead you to where she is being kept. Unfortunatley I did not have time to analyze the object in question, but if you are as great as the stories imply, it should be but a simple task.<br><br>
+  Again I implore you brave travelers, find the Lady Hillinder and rescue her from this great peril.<br><br>
+  Regards,<br>
+  Sir Jerroth</p>
+  <form id = "nameForm">
+    <input id = "userName" placeholder = "#nameForm">
+    <button type = "submit" class = "btn btn-info" id = "submitName">Submit</button>
+  </form>
+</div>
+<div id = "gameScreen" class = "container wrapper">
+    <div class = "row">
+      <div class = "col-md-2 well" id = "mainDisplay">
+        <div id = "statsDisplay">
+          <div id = "name"><span id = "showName"></span></div>
+          <p id = "hitPoints">Hitpoints: <span id = "showHitPoints"></span></p>
+          <p id = "strength">Strength: <span id = "showStrength"></span></p>
+          <p id = "dexterity">Dexterity: <span id = "showDexterity"></span></p>
+          <p id = "intelligence">Intelligence: <span id = "showIntelligence"></span></p>
+          <p id = "swordsmanship">Swordsmanship: <span id = "showSwordsmanship"></span></p>
+          <p id = "tactics">Tactics: <span id = "showTactics"></span></p>
+          <p id = "hiding">Hiding: <span id = "showHiding"></span></p>
+          <p id = "locationName">Location: <span id = "showLocationName"></span></p>
+        </div>
+      </div>
+      <div class = "col-md-5 well">
+        <div id = "fightDisplay">
+          <p>HP: <span id = "HP"></span><span id = "missingHP"></span></p>
+          <p>Weapon: <span id = "displayWeapon"></span></p>
+
+        </div>
+      </div>
+      <div class ="col-md-3 well">
+        <div id = "fightLog">
+        </div>
+      </div>
+      <div class = "col-md-2 well">
+        <div id = "monsters">
+        </div>
+        <div id = "items">
+        </div>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-5 well">
+        <div id = "artDisplayBox">
+        </div>
+      </div>
+      <div class = "col-md-5 well">
+        <div id = "climb">
+          <button id = "armButton" class = "btn btn-info">Arm <span class = "weaponName"></span></button>
+          <button id = "getButton" class = "btn btn-info">Get <span class = "getButtonFiller"></span></p>
+          <button id = "fleeButton" class = "btn btn-warning">Flee</button>
+          <button id = "fightButton" class = "btn btn-danger">Fight</button>
+          <button id = "climbDownButton" class = "btn btn-info moveButton">Climb Down</button>
+          <button id = "climbUpButton" class = "btn btn-success moveButton">Climb Up</button>
+        </div>
+      </div>
+    <div class = "col-md-2 well" id = "locationDisplayBox">
+      <div id = "locationDisplay">
+        <span id = "location"></span>
+      </div>
+    </div>
+  </div>
+  <div class = "row">
+    <div class = "col-md-10">
+      <form id = "userInputForm">
+        <input id = "userInput" class = "form-control">
+      </form>
+    </div>
+    <div class = "col-md-2" id = "buttonDisplayBox">
+      <div id = "buttons">
+        <button id = "backButton" class = "btn btn-info moveButton">Back</button>
+        <button id = "forwardButton" class = "btn btn-success moveButton">Forward</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div id = "deathScreen" class = "wrapper">
+    <h1>You are dead.</h1>
+    <a href = "index.html"><h3>Start over.</h3></a>
+  </div>
+
+
+  </body>
+</html>
