@@ -1,10 +1,11 @@
 
-function MapLocation(name, description, location, items, monsters, exits){
+function MapLocation(name, description, location, items, monsters, friendlies, exits){
   this.name = name,
   this.description = description,
   this.location = location,
   this.items = [],
   this.monsters = [],
+  this.friendlies = [],
   this.exits = []
 }
 
@@ -41,36 +42,12 @@ game.getMap(mountainLedge);
 game.getMap(mountainInterior2);
 game.getMap(mountainTop);
 
-MapLocation.prototype.displayExtras = function(){
-  $("#fightLog").text('');
-  $("#monsters").text('');
-  if(this.monsters[0] && this.monsters[0].hp > 0){
-    $("#fightButton").show();
-  }
-  else{
-    $("#fightButton").hide();
-  }
-  for (var i = 0; i<this.monsters.length; i++){
-    if(!this.monsters[i].checkDead()){
-      $("#fightLog").append(this.monsters[i].name +  ": " + this.monsters[i].hp + "HP" + "<br>");
-      $("#monsters").append("A " + this.monsters[i].name + " lurks around you. <br>")
-    }
-    else{
-      $("#fightLog").append(this.monsters[i].name +  ": corpse"  + "<br>");
-      $("#monsters").append("A " + this.monsters[i].name + " is dead. <br>")
-    };
-  };
-};
-
-
 MapLocation.prototype.spawnMonster = function(number){
   this.monsters.push(game.monsters[number])
-  this.displayExtras();
 };
 
 MapLocation.prototype.spawnItem = function(number){
   this.items.push(game.items[number])
-  this.displayExtras();
 };
 
 MapLocation.prototype.getExits = function(){
@@ -98,3 +75,7 @@ MapLocation.prototype.getExits = function(){
     $("#backButton").show();
   };
 };
+
+MapLocation.prototype.spawnFriendly = function(number){
+  this.friendlies.push(game.friendlies[number]);
+}

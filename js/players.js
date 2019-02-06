@@ -18,13 +18,12 @@ function Character(name, hp, damage, strength, dexterity, intelligence, courage,
 
 Character.prototype.hit = function(target){
   target.takeDamage(this.damage);
-  game.gameMap[this.location].displayExtras();
+  game.displayAll()
 };
 
 Character.prototype.fight = function(monster){
   this.hit(monster);
   console.log("You hit the monster for " + this.damage + " leaving him with " + monster.hp + " hp");
-
   if(!monster.checkDead()){
     monster.hit(this);
     console.log("The monster swings for " + monster.damage + ". You have " + this.hp + "hp.");
@@ -36,11 +35,10 @@ Character.prototype.fight = function(monster){
 Character.prototype.checkDead = function(){
   if(this.hp < 1){
     console.log("You are dead.");
-    this.isDead();
+    $("#gameScreen").hide();
+    $("#deathScreen").fadeIn();
   }
 };
-
-
 
 Character.prototype.takeDamage = function(damage){ //  PLAYER TAKE DAMAGE FUNCTION
   this.hp -= damage;
@@ -68,6 +66,7 @@ Character.prototype.displayWeapon = function(){  // DISPLAYS ARMED WEAPON IN HTM
 Character.prototype.armWeapon = function(weapon){    //  ARM WEAPON, ONE WEAPON AT A TIME
   if(this.weapon[0] == bareHands){
     this.weapon.unshift(weapon);
+    this.addBonusDamage(weapon);
   }
   else{
     this.changeWeapon(weapon)
@@ -75,12 +74,12 @@ Character.prototype.armWeapon = function(weapon){    //  ARM WEAPON, ONE WEAPON 
   this.displayWeapon();
 }
 Character.prototype.changeWeapon = function(weapon){   //  CHANGE WEAPON, GETS CALLED IF WEAPON [] ALREADY HAS AN ITEM - PUSHES CURRENT WEAPON TO INVENTORY
-  this.inventory.push(this.weapon[0]);
-  this.weapon.shift();
-  this.weapon.unshift(weapon);
+  this.disarmWeapon();
+  this.armWeapon();
 };
 
-Character.prototype.disarmWeapon = function(){       //  DISARMS WEAPON, PUSHES TO INVENTORY
+Character.prototype.disarmWeapon = function(){      //  DISARMS WEAPON, PUSHES TO INVENTORY
+  this.loseBonusDamage(this.weapon[0]);
   this.inventory.push(this.weapon[0])
   this.weapon.shift();
   this.displayWeapon();
@@ -128,44 +127,36 @@ Character.prototype.move = function(input){   //       !!! NEEDS A BUTTON ON THE
   $("button").hide();
   if(input == "forward"){
   this.location ++
-
   }
   else{
     this.location --
-
   };
-
-  $("#location").text(game.gameMap[this.location].description);
-  game.gameMap[this.location].displayExtras();
   this.heal(3);
-  game.gameMap[this.location].getExits();
-  $("#items").text('');
-  game.gameMap[this.location].items.forEach(function(item){
-    item.displayItem();
-  });
+  game.displayAll();  //  game.js line 36
 };
 
 Character.prototype.get = function(){
-  $("#items").text('');
   character.inventory.push(map[character.location].items[0]);
   map[character.location].items.shift();
+  game.displayAll();
 };
 
 Character.prototype.displayArmButton = function(){
   $("#armButton").show();
 }
 
-Character.prototype.isDead = function(){
-  $("#gameScreen").hide();
-  $("#deathScreen").fadeIn();
+
+
+Character.prototype.addBonusDamage = function(item){
+  this.damage += item.damage;
 };
 
-Character.prototype.flee = function() {//added to original js
-  this.hp -= 5; //added to original js
-  this.location --; //added to original js
-  $("#forwardButton").show(); //added to original js
-  $("#backButton").show(); //added to original js
-  $("#fleeButton").hide() //added to original js
+Character.prototype.loseBonusDamage = function(item){
+  this.damage -= item.damage;
+};
+
+Character.prototype.drinkPotion = function(item){
+  this.heal(item.healing);
 }
 
-game.getPlayer()
+game.getPlayer();
