@@ -1,24 +1,27 @@
+# | **Go'Leir - A Text RPG** |
+
 | <img src="https://github.com/identicons/dsarbora.png" width=100 alt="GitHub identicon for author dsarbora"> | <img src="https://github.com/identicons/MicaelaDJ.png" width=100 alt="GitHub identicon for author MicaelaDJ"> | <img src="https://github.com/identicons/samstoia.png" width=100 alt="GitHub identicon for author samstoia"> | <img src="https://github.com/identicons/londresri.png" width=100 alt="GitHub identicon for author LondresRi"> |
 |:-----:|:-----:|:-----:|:-----:|
 | [**DA**](https://github.com/dsarbora) | [**MI**](https://github.com/MicaelaDJ) | [**SA**](https://github.com/samstoia) | [**SH**](https://github.com/LondresRi )|
 
-## | **RPG Game** |
-
-#### RPG Project, initiated January 30th, 2019
+### Project Go'Leir - initiated January 30th, 2019, updated February 7th, 2019
 #### By Team Dami-Sash
 
 ----------
 
 ## Description
-TODO
+Go'Leir is a text-based adventure role-playing game designed using HTML and JavaScript, intending to be a tribute to the original adventure games that were the beginning of our modern gaming entertainment. This project was initiated as part of the Epicodus curriculum for the Intro to Programming team week assignment. The game features all original story, flavor text, expandable core mechanics, and artwork.
 
 ## Known Bugs
 
-* No known bugs.
+* Only bugs, this is all bugs.
 
 ## Specifications
 
-TODO
+| Behavior | Output | Input |
+|----------|:------:|:-----:|
+
+
 
 ## Setup and Use
 
@@ -29,12 +32,15 @@ To setup or use this webpage:
 * Must have basic computer use proficiency
 
 ##### View Online
-Visit [my RPG Game GitHub Page](https://samstoia.github.io/rpg-game/) at samstoia.GitHub.io/rpg-game/
+Visit one of our [GH-Page hosted sites](https://samstoia.github.io/rpg-game/) such as samstoia.GitHub.io/rpg-game/
 
 ##### Open Locally
-1. Navigate to [my TODO repo](https://github.com/samstoia/rpg-game at GitHub.com/samstoia/rpg-game
+1. Navigate to [one of our game repos](https://github.com/samstoia/rpg-game) such as GitHub.com/samstoia/rpg-game
 2. Clone the repository using the [HTTPS URL](https://github.com/samstoia/rpg-game)
 3. Open the index.html file with your preferred browser to view website, or alternately use an IDE to view the code.
+
+##### Legal Usage
+1. Read GNU License to understand terms and conditions of use.
 
 ## Built With
 
@@ -42,6 +48,7 @@ Visit [my RPG Game GitHub Page](https://samstoia.github.io/rpg-game/) at samstoi
 * HTML/CSS/Bootstrap
 * JavaScript/jQuery-3.3.1
 * GitHub Pages
+* TODO Artwork Programs
 
 ## Contributors
 
@@ -54,20 +61,31 @@ Visit [my RPG Game GitHub Page](https://samstoia.github.io/rpg-game/) at samstoi
 
 ## Credits
 
-Note: While all contributors have made full-stack additions to the code, each pair was designated to _focus_ on front-end and back-end components as shown below.
+Note: While all contributors have made full-stack additions to the code, each pair was designated to _focus_ on front-end and back-end components as shown below. The same applies to the overall project, as all contributors have taken part in all aspects of creating the game, but focused on particular areas.
 
 | | Dave Sarbora | Micaela Jawor | Sam Stoia | Shawn Lunsford |
 |-|:------------:|:-------------:|:---------:|:--------------:|
-| Character Design | |◈| | |
-| Coding: Back-End |◈| |◈| |
-| Coding: Front-End | |◈| |◈|
+| **Design** |
+| Artwork | |◈| | |
 | Core Mechanics |◈| | | |
-| Documentation | | | |◈|
+| Gameplay |◈|◈|◈| |
+| Story | |◈|◈| |
+| User Interface | |◈| |◈|
+| **Writing** |
 | Flavor Text | | | | |
-| Game Artwork | |◈| | |
-| Monster Design | |◈| | |
 | Story Text | | | | |
-| UI Design |◈| | |◈|
+| **Programming** |
+| Back-End |◈| |◈| |
+| Front-End | |◈| |◈|
+| Refractoring | | |◈| |
+| **Graphics** |
+| Backgrounds | |◈| | |
+| Icons | |◈| | |
+| **Quality Assurance** |
+| Documentation | | | |◈|
+| Testing | | | | |
+| **Special Thanks** |
+| | | | | | |
 
 ## Support and contact details
 
@@ -762,5 +780,5 @@ Public License instead of this License.  But first, please read
 > "...the first thing that humanity has built that humanity doesn't understand..."
 > - Eric Schmidt, Google (Alphabet Inc.)
 
-#### Adventureland by Scott Adams
+#### "Adventureland" by Scott Adams
 > The first text adventure game (series) of its kind available commercially on personal computers. We thank you Mr. Adams for leading the charge.
