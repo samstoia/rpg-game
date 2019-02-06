@@ -68,6 +68,13 @@ $("#nameForm").submit(function(){
 
   $("#fightButton").click(function(){
     character.fight(map[character.location].monsters[0]);
+    $("#forwardButton").hide(); //added to original js
+    $("#backButton").hide(); //added to original js
+    $("#fleeButton").show(); //added to original js
+  });
+
+  $("#fleeButton").click(function(){ //added to original js
+    character.flee(); //added to original js
   });
 
   $("#userInputForm").submit(function(){

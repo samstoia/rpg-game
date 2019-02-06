@@ -160,4 +160,12 @@ Character.prototype.isDead = function(){
   $("#deathScreen").fadeIn();
 };
 
+Character.prototype.flee = function() {//added to original js
+  this.hp -= 5; //added to original js
+  this.location --; //added to original js
+  $("#forwardButton").show(); //added to original js
+  $("#backButton").show(); //added to original js
+  $("#fleeButton").hide() //added to original js
+}
+
 game.getPlayer()

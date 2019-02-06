@@ -35,4 +35,5 @@ Item.prototype.displayItem = function(){
 
 var bareHands = new Item("Bare hands", "none", 10, 3)
 var sword = new Item("Sword", "ruin", 10, 3, 10, "Dragon Slaying");
+var potion = new Item("Potion", "none", 0, 20) //added to original js
 game.getItem(sword);
