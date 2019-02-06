@@ -6,6 +6,10 @@ body {
   font-size: calc(30px - 2vh);
 }
 
+.wrapper {
+  display: none;
+}
+
 table {
   border: 3px solid white;
   margin-top: 10px;
@@ -92,8 +96,8 @@ h3 {
   text-align: justify;
   border-style: double;
   padding: 20px;
-  font-family: 'Krub', sans-serif;
-  font-size: 20px;
+  font-family: 'Marck Script', cursive;
+  font-size: 25px;
 }
 #textArea {
   margin: 10px;

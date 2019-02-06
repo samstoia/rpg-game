@@ -4,21 +4,22 @@
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
-    <script src = "js/game.js" type="text/javascript"></script>
-    <script src = "js/items.js" type="text/javascript"></script>
-    <script src = "js/monsters.js" type="text/javascript"></script>
-    <script src = "js/maps.js" type="text/javascript"></script>
-    <script src = "js/players.js" type="text/javascript"></script>
+    <script src="descriptions/descriptions.js"type="text/javascript"></script>
+    <script src="js/game.js" type="text/javascript"></script>
+    <script src="js/items.js" type="text/javascript"></script>
+    <script src="js/monsters.js" type="text/javascript"></script>
+    <script src="js/maps.js" type="text/javascript"></script>
+    <script src="js/players.js" type="text/javascript"></script>
     <script src="js/scripts.js" type="text/javascript"></script>
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/styles.css" type="text/css" media="all">
-    <link href="https://fonts.googleapis.com/css?family=Cinzel|Krub" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Krub|Marck+Script" rel="stylesheet">
 
     <title>RPG Project</title>
   </head>
   <body>
 
-    <div id="titleScreen">
+    <div id="titleScreen" class="container wrapper">
       <p id="title">Go'Leir</p>
       <p id="pressStart">Press "Start" to begin your adventure!</p>
       <button id="startGame" type="button" name="button">Start</button>
@@ -40,8 +41,8 @@
       </form>
     </div>
 
-    <div id="playScreen">
-      <div id="playArea" class="container">
+    <div id="gameScreen" class="container wrapper">
+      <div id="playArea">
         <div id="topDiv" class="row">
           <div id="visualArea" class="col-md-3">
             <div id="backgroundPicture" class="row">
