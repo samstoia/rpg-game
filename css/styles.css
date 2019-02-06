@@ -1,0 +1,101 @@
+/* Licensed under GPL-3.0-or-later */
+body {
+  background-color: #272936;
+  color: white;
+  padding: 50px;
+}
+
+table {
+  border: 3px solid white;
+  margin-top: 10px;
+  table-layout: fixed;
+}
+
+td {
+  border-style: double;
+  padding: 20px;
+}
+
+tr {
+  border-style: double;
+}
+
+.visual {
+  border: 2px solid;
+  padding: 5px;
+  max-height: 350px;
+}
+
+.icon {
+  max-height: 20px;
+  margin: 11px;
+}
+
+#titleScreen {
+  text-align: center;
+}
+
+#title {
+  font-family: 'Cinzel', serif;
+  font-size: 80px;
+  border-style: double;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 40px;
+}
+
+#pressStart {
+  font-family: 'Krub', sans-serif;
+  font-size: 25px;
+  margin: 40px;
+}
+
+#startButton {
+  font-family: 'Krub', sans-serif;
+  font-size: 20px;
+  margin: 10px;
+  border: 3px solid white;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #46495E;
+  color: white;
+}
+
+#actionArea {
+  margin: 10px;
+  text-align: center;
+}
+
+#itemArea {
+  height: 200px;
+}
+
+#visualArea {
+  margin: 10px;
+  text-align: center;
+  height: 400px;
+  border-style: double;
+  line-height: 400px
+}
+
+#textArea {
+  margin: 10px;
+  text-align: justify;
+  height: 600px;
+  border-style: double;
+  padding: 20px;
+  /*overflow: scroll;*/
+  font-family: 'Krub', sans-serif;
+  font-size: 20px
+}
+
+#userDiv {
+  text-align: center;
+}
+
+#userInput {
+  width: 50%;
+  text-align: center;
+  padding: 5px;
+  margin: 10px;
+}
