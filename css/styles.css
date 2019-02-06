@@ -3,6 +3,7 @@ body {
   background-color: #272936;
   color: white;
   padding: 50px;
+  font-size: calc(30px - 2vh);
 }
 
 table {
@@ -20,6 +21,26 @@ tr {
   border-style: double;
 }
 
+a:link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+button, h3 {
+  font-family: 'Krub', sans-serif;
+  font-size: 20px;
+  margin: 10px;
+  border: 3px solid white;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #46495E;
+  color: white;
+}
+
+h3 {
+  padding: 8px;
+}
+
 .visual {
   border: 2px solid;
   padding: 5px;
@@ -31,7 +52,7 @@ tr {
   margin: 11px;
 }
 
-#titleScreen {
+#titleScreen, #deathScreen {
   text-align: center;
 }
 
@@ -50,17 +71,6 @@ tr {
   margin: 40px;
 }
 
-#startButton {
-  font-family: 'Krub', sans-serif;
-  font-size: 20px;
-  margin: 10px;
-  border: 3px solid white;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: #46495E;
-  color: white;
-}
-
 #actionArea {
   margin: 10px;
   text-align: center;
@@ -77,7 +87,14 @@ tr {
   border-style: double;
   line-height: 400px
 }
-
+#intro {
+  margin: 10px;
+  text-align: justify;
+  border-style: double;
+  padding: 20px;
+  font-family: 'Krub', sans-serif;
+  font-size: 20px;
+}
 #textArea {
   margin: 10px;
   text-align: justify;
@@ -86,7 +103,7 @@ tr {
   padding: 20px;
   /*overflow: scroll;*/
   font-family: 'Krub', sans-serif;
-  font-size: 20px
+  font-size: 20px;
 }
 
 #userDiv {
@@ -98,4 +115,9 @@ tr {
   text-align: center;
   padding: 5px;
   margin: 10px;
+}
+
+#deathNote {
+  font-family: 'Cinzel', serif;
+  font-size: 50px;
 }
