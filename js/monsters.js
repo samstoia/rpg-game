@@ -16,7 +16,9 @@ Monster.prototype.takeDamage = function(damage){
 Monster.prototype.checkDead = function(){
   if(this.hp < 1){
     console.log("The monster is dead.");
-    $("#fight").hide();
+    $("#fightButton").hide();
+    game.characters[0].inCombat = false;
+    //game.characterLocation().getExits();
     return true;
   }
   else{
