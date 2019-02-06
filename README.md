@@ -20,8 +20,12 @@ Go'Leir is a text-based adventure role-playing game designed using HTML and Java
 
 | Behavior | Output | Input |
 |----------|:------:|:-----:|
-
-
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
 
 ## Setup and Use
 
