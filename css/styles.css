@@ -2,8 +2,7 @@
 body {
   background-color: #272936;
   color: white;
-  border-style: solid;
-  padding: 5px;
+  padding: 50px;
 }
 
 table {
@@ -30,6 +29,36 @@ tr {
 .icon {
   max-height: 20px;
   margin: 11px;
+}
+
+#titleScreen {
+  text-align: center;
+}
+
+#title {
+  font-family: 'Cinzel', serif;
+  font-size: 80px;
+  border-style: double;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 40px;
+}
+
+#pressStart {
+  font-family: 'Krub', sans-serif;
+  font-size: 25px;
+  margin: 40px;
+}
+
+#startButton {
+  font-family: 'Krub', sans-serif;
+  font-size: 20px;
+  margin: 10px;
+  border: 3px solid white;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #46495E;
+  color: white;
 }
 
 #actionArea {
