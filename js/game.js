@@ -1,10 +1,11 @@
 
 
-function Game(characters, monsters, items, gameMap){
+function Game(characters, monsters, items, gameMap, friendlies){
   this.characters = [],
   this.monsters = [],
   this.items = [],
-  this.gameMap = []
+  this.gameMap = [],
+  this.friendlies = []
 }
 
 Game.prototype.getPlayer = function(){
@@ -24,7 +25,35 @@ Game.prototype.getMap = function(mapLocation){
   this.gameMap.push(mapLocation);
 };
 
+Game.prototype.getFriendly = function(NPC){
+  this.friendlies.push(NPC);
+};
 
+Game.prototype.characterLocation = function(){
+  return game.gameMap[character.location]}
+
+Game.prototype.clearDisplays = function(){
+  $("#monsters").text('')
+  $("#fightLog").text('')
+  $("#items").text('')
+}
+
+Game.prototype.displayAll = function(){
+
+  this.clearDisplays();
+  this.characters[0].displayAll();
+  $("#location").text(this.characterLocation().description);
+  this.characterLocation().getExits();
+  this.characterLocation().items.forEach(function(item){
+    item.displayItem();
+  });
+  this.characterLocation().monsters.forEach(function(monster){
+    monster.displayMonster();
+  });
+  this.characterLocation().friendlies.forEach(function(friendly){
+    friendly.displayNPC();
+  });
+}
 
 //========================================================
 var game = new Game();

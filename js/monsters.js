@@ -24,6 +24,21 @@ Monster.prototype.checkDead = function(){
   }
 }
 
+Monster.prototype.displayMonster = function(){
+  if(this && !this.checkDead()){
+      $("#fightButton").show();
+      $("#fightLog").append(this.name +  ": " + this.hp + "HP" + "<br><br>");
+      $("#monsters").append(monsterDescriptions[Math.floor(Math.random()*monsterDescriptions.length)] + this.name.toLowerCase() + monsterActions[Math.floor(Math.random()*monsterActions.length)]+ "<br><br>")
+  }
+  else if(this && this.checkDead()){
+    $("#fightLog").append(this.name +  ": corpse"  + "<br><br>");
+    $("#monsters").append("A " + this.name.toLowerCase() + " is dead. <br><br>")
+  }
+  else{
+    $("#fightButton").hide();
+  };
+};
+
 var caveRat = new Monster("Cave rat", 17, 4);
 var troll = new Monster("Troll", 83, 15);
 var ogre = new Monster("Ogre", 64, 18);
@@ -36,3 +51,51 @@ game.getMonster(ogre);
 game.getMonster(skeleton);
 game.getMonster(ogreLord);
 game.getMonster(dragon);
+
+function NPC(name, hp, damage, items, location, friendly){
+  this.name = name,
+  this.hp = hp,
+  this.damage = damage,
+  this.items = [],
+  this.location = location,
+  this.friendly = true
+};
+
+NPC.prototype.takeDamage = function(damage){
+  this.hp -= damage/2;
+  console.log(this.name + ": 'Ouch! Why would you do that?''")
+  this.friendly = false;
+};
+
+NPC.prototype.hit = function(target){
+  console.log("Hit message");
+  target.takeDamage(this.damage);
+};
+
+NPC.prototype.checkDead = function(){
+  if(this.hp < 1){
+    return true;
+  }
+  else{
+    return false;
+  };
+};
+
+NPC.prototype.displayNPC = function(){
+  if(this && !this.checkDead()){
+      $("#fightButton").show();
+      $("#fightLog").append(this.name);
+      $("#monsters").append("A friendly woman named " + this.name.toLowerCase() + " introduces herself."+ "<br><br>")
+  }
+  else if(this && this.checkDead()){
+    $("#fightLog").append(this.name +  ": corpse"  + "<br><br>");
+    $("#monsters").append("A " + this.name.toLowerCase() + " is dead. <br><br>")
+  }
+  else{
+    $("#fightButton").hide();
+  };
+};
+
+
+var npc = new NPC("Georgia", 100, 5, "Sword", 3);
+game.getFriendly(npc);
