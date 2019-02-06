@@ -62,6 +62,8 @@ $("#nameForm").submit(function(){
   })
 
   $("#fightButton").click(function(){
+    $("#forwardButton").hide();
+    $("#backButton").hide()
     if(map[character.location].monsters[0]){
       character.fight(map[character.location].monsters[0]);
     }
@@ -71,6 +73,7 @@ $("#nameForm").submit(function(){
     else{
       console.log("You see nothing here to fight");
     }
+
   });
 
   $("#userInputForm").submit(function(){

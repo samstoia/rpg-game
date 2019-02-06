@@ -43,7 +43,7 @@ Game.prototype.displayAll = function(){
   this.clearDisplays();
   this.characters[0].displayAll();
   $("#location").text(this.characterLocation().description);
-  this.characterLocation().getExits();
+
   this.characterLocation().items.forEach(function(item){
     item.displayItem();
   });
@@ -53,6 +53,9 @@ Game.prototype.displayAll = function(){
   this.characterLocation().friendlies.forEach(function(friendly){
     friendly.displayNPC();
   });
+  if(!this.characters[0].inCombat){
+    this.characterLocation().getExits();
+  }
 }
 
 //========================================================

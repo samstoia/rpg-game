@@ -1,5 +1,5 @@
 //              PLAYER CHARACTER CONSTRUCTOR AND METHODS
-function Character(name, hp, damage, strength, dexterity, intelligence, courage, swordsmanship, tactics, hiding, weapon, inventory, location, previousLocations){
+function Character(name, hp, damage, strength, dexterity, intelligence, courage, swordsmanship, tactics, hiding, weapon, inventory, inCombat, location, previousLocations){
   this.name = name,
   this.hp = hp,
   this.damage = damage,
@@ -12,6 +12,7 @@ function Character(name, hp, damage, strength, dexterity, intelligence, courage,
   this.hiding = hiding,
   this.weapon = [bareHands],
   this.inventory = [],
+  this.inCombat = false,
   this.location = 0,
   this.previousLocations = previousLocations
 };
@@ -22,6 +23,7 @@ Character.prototype.hit = function(target){
 };
 
 Character.prototype.fight = function(monster){
+  this.inCombat = true;
   this.hit(monster);
   console.log("You hit the monster for " + this.damage + " leaving him with " + monster.hp + " hp");
   if(!monster.checkDead()){
@@ -29,6 +31,7 @@ Character.prototype.fight = function(monster){
     console.log("The monster swings for " + monster.damage + ". You have " + this.hp + "hp.");
     this.checkDead();
   }
+
 };
 
 
@@ -55,8 +58,9 @@ Character.prototype.heal = function(healing){   //  PLAYER HEALING FUNCTION
   this.displayAll();
 };
 
-Character.prototype.run = function(){     //
-
+Character.prototype.flee = function(){     //
+  this.takeDamage(5);
+  this.move();
 };
 
 Character.prototype.displayWeapon = function(){  // DISPLAYS ARMED WEAPON IN HTML
