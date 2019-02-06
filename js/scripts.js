@@ -26,7 +26,7 @@ $("#nameForm").submit(function(){
 });
 
 
-  $("button").hide()
+  // $("button").hide()
   $("#startGame").show();
   $("#submitName").show();
   game.displayAll();

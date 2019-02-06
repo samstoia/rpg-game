@@ -43,51 +43,97 @@
     </div>
 
     <div id="gameScreen" class="container wrapper">
-      <div id="playArea">
-        <div id="topDiv" class="row">
-          <div id="visualArea" class="col-md-3">
-            <div id="backgroundPicture" class="row">
-              <img class="visual" src="img/image-placeholder.jpg" alt="An image of a castle">
+
+      <div class="storyScreen">
+        <div id="playArea">
+          <div id="topDiv" class="row">
+            <div id="visualArea" class="col-md-3">
+              <div id="backgroundPicture" class="row">
+                <img class="visual" src="img/image-placeholder.jpg" alt="An image of a castle">
+              </div>
+              <div id="itemArea" class="row">
+                <table class="table">
+                  <tr>
+                    <td><img class="icon" src="img/sword-placeholder.png" alt="A sword icon">Sword</td>
+                  </tr>
+                  <tr>
+                    <td><img class="icon" src="img/shield-placeholder.png" alt="A shield icon">Shield</td>                </tr>
+                  <tr>
+                    <td><img class="icon" src="img/journal-placeholder.png" alt="A scroll icon">Journal</td>
+                  </tr>
+                </table>
+              </div>
             </div>
-            <div id="itemArea" class="row">
-              <table class="table">
-                <tr>
-                  <td><img class="icon" src="img/sword-placeholder.png" alt="A sword icon">Sword</td>
-                </tr>
-                <tr>
-                  <td><img class="icon" src="img/shield-placeholder.png" alt="A shield icon">Shield</td>                </tr>
-                <tr>
-                  <td><img class="icon" src="img/journal-placeholder.png" alt="A scroll icon">Journal</td>
-                </tr>
-              </table>
+            <div id="textArea" class="col-md-8">
+              <p>Duis neque odio, congue egestas lorem quis, varius tincidunt lorem. Duis hendrerit odio et ipsum tristique, et dapibus nulla condimentum. Pellentesque lectus velit, venenatis nec bibendum nec, convallis a nisi. Etiam fringilla rutrum eros, eget pretium tortor porttitor quis. Cras eget magna eget diam vehicula accumsan. Aliquam mollis tincidunt semper. Fusce finibus eros ut diam suscipit, sit amet lobortis dui pellentesque. Etiam non lorem vel ipsum ultrices euismod sit amet ac diam. Nunc tincidunt sem mauris, ac suscipit augue tincidunt sit amet.</p>
+              <p>. . .</p>
+              <p>Pellentesque ac vehicula lectus. Suspendisse sapien lacus, rhoncus sit amet urna vitae, laoreet pretium nulla. Sed gravida eget urna quis fermentum. Praesent finibus, augue non vestibulum aliquam, orci nunc congue diam, vitae aliquet mauris tellus a velit. Sed at mauris id felis pretium ultricies. Maecenas fermentum nunc sit amet ultrices aliquet. Integer maximus ex in cursus euismod. Suspendisse porttitor metus nec tincidunt sodales. Phasellus et tempus diam, non porttitor diam. Ut vitae neque vel elit interdum convallis eget quis orci. Fusce pretium turpis nec lobortis eleifend.</p>
+              <p>What do you do?</p>
             </div>
           </div>
-          <div id="textArea" class="col-md-8">
-            <p>Duis neque odio, congue egestas lorem quis, varius tincidunt lorem. Duis hendrerit odio et ipsum tristique, et dapibus nulla condimentum. Pellentesque lectus velit, venenatis nec bibendum nec, convallis a nisi. Etiam fringilla rutrum eros, eget pretium tortor porttitor quis. Cras eget magna eget diam vehicula accumsan. Aliquam mollis tincidunt semper. Fusce finibus eros ut diam suscipit, sit amet lobortis dui pellentesque. Etiam non lorem vel ipsum ultrices euismod sit amet ac diam. Nunc tincidunt sem mauris, ac suscipit augue tincidunt sit amet.</p>
-            <p>. . .</p>
-            <p>Pellentesque ac vehicula lectus. Suspendisse sapien lacus, rhoncus sit amet urna vitae, laoreet pretium nulla. Sed gravida eget urna quis fermentum. Praesent finibus, augue non vestibulum aliquam, orci nunc congue diam, vitae aliquet mauris tellus a velit. Sed at mauris id felis pretium ultricies. Maecenas fermentum nunc sit amet ultrices aliquet. Integer maximus ex in cursus euismod. Suspendisse porttitor metus nec tincidunt sodales. Phasellus et tempus diam, non porttitor diam. Ut vitae neque vel elit interdum convallis eget quis orci. Fusce pretium turpis nec lobortis eleifend.</p>
-            <p>What do you do?</p>
+          <div id="midDiv" class="row">
+            <div class="col-md-4">
+            </div>
+            <div id="actionArea" class="col-md-4">
+              <button id = "lookButton">Look</button>
+              <button id = "forwardButton" class = "moveButton">Onward!</button>
+              <button id = "backButton" class = "moveButton">Go Back</button>
+              <button id = "climbDownButton" class = "moveButton">Climb Down</button>
+              <button id = "climbUpButton" class = "moveButton">Climb Up</button>
+            </div>
           </div>
-        </div>
-        <div id="midDiv" class="row">
-          <div class="col-md-4">
-          </div>
-          <div id="actionArea" class="col-md-4">
-            <table style="width:100%">
-              <tr>
-                <td>Fight</td>
-                <td>Flee</td>
-                <td>Hide</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <div id="userDiv" class="row">
-          <div class="col-md-12">
-            <input type="text" id="userInput" placeholder="What do you want to do?" name="userInput">
+          <div id="userDiv" class="row">
+            <div class="col-md-12">
+              <input type="text" id="userInput" placeholder="What do you want to do?" name="userInput">
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="fightScreen">
+        <div id="playArea">
+          <div id="topDiv" class="row">
+            <div id="visualArea" class="col-md-3">
+              <div id="monsterPicture" class="row">
+                <img class="monster" src="img/monster-placeholder.png" alt="An image of a fearsome dragon">
+              </div>
+              <div id="itemArea" class="row">
+                <table class="table">
+                  <tr>
+                    <td><img class="icon" src="img/sword-placeholder.png" alt="A sword icon">Sword</td>
+                  </tr>
+                  <tr>
+                    <td><img class="icon" src="img/shield-placeholder.png" alt="A shield icon">Shield</td>                </tr>
+                  <tr>
+                    <td><img class="icon" src="img/journal-placeholder.png" alt="A scroll icon">Journal</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div id="textArea" class="col-md-8">
+              <p>Duis neque odio, congue egestas lorem quis, varius tincidunt lorem. Duis hendrerit odio et ipsum tristique, et dapibus nulla condimentum. Pellentesque lectus velit, venenatis nec bibendum nec, convallis a nisi. Etiam fringilla rutrum eros, eget pretium tortor porttitor quis. Cras eget magna eget diam vehicula accumsan. Aliquam mollis tincidunt semper. Fusce finibus eros ut diam suscipit, sit amet lobortis dui pellentesque. Etiam non lorem vel ipsum ultrices euismod sit amet ac diam. Nunc tincidunt sem mauris, ac suscipit augue tincidunt sit amet.</p>
+              <p>. . .</p>
+              <p>Pellentesque ac vehicula lectus. Suspendisse sapien lacus, rhoncus sit amet urna vitae, laoreet pretium nulla. Sed gravida eget urna quis fermentum. Praesent finibus, augue non vestibulum aliquam, orci nunc congue diam, vitae aliquet mauris tellus a velit. Sed at mauris id felis pretium ultricies. Maecenas fermentum nunc sit amet ultrices aliquet. Integer maximus ex in cursus euismod. Suspendisse porttitor metus nec tincidunt sodales. Phasellus et tempus diam, non porttitor diam. Ut vitae neque vel elit interdum convallis eget quis orci. Fusce pretium turpis nec lobortis eleifend.</p>
+              <p>What do you do?</p>
+            </div>
+          </div>
+          <div id="midDiv" class="row">
+            <div class="col-md-4">
+            </div>
+            <div id="actionArea" class="col-md-4">
+              <button id = "lookButton">Look</button>
+              <button id = "fightButton">Fight</button>
+              <button id = "fleeButton">Flee</button>
+            </div>
+          </div>
+          <div id="userDiv" class="row">
+            <div class="col-md-12">
+              <input type="text" id="userInput" placeholder="What do you want to do?" name="userInput">
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div id="deathScreen" class="wrapper">

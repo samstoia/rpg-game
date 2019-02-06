@@ -5,10 +5,10 @@ body {
   padding: 50px;
   font-size: calc(30px - 2vh);
 }
-
+/*
 .wrapper {
   display: none;
-}
+}*/
 
 table {
   border: 3px solid white;
@@ -51,6 +51,12 @@ h3 {
   max-height: 350px;
 }
 
+.monster {
+  border: 2px solid;
+  padding: 5px;
+  max-height: 200px;
+}
+
 .icon {
   max-height: 20px;
   margin: 11px;
@@ -91,6 +97,7 @@ h3 {
   border-style: double;
   line-height: 400px
 }
+
 #intro {
   margin: 10px;
   text-align: justify;
