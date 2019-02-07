@@ -25,6 +25,7 @@ $("#nameForm").submit(function(){
   character.askName(name);
   $("#preGameScreen").hide();
   $("#gameScreen").fadeIn();
+  game.displayAll();
 });
 
 

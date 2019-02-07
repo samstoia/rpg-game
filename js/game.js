@@ -93,8 +93,42 @@ Game.prototype.displayAll = function(){
     $("#restButton").show();
   }
   $("#lookButton").show();
-
-}
+  $(".monsterImg").hide();
+  if(this.characterLocation().monsters[0] && !this.characterLocation().monsters[0].checkDead()){
+    if(this.characterLocation().monsters[0].name == "Goblin"){
+      $("#goblin").show
+    }
+    else if(this.characterLocation().monsters[1].name == "Goblin"){
+      $("#ogre").show
+    }
+    else if(this.characterLocation().monsters[2].name == "Goblin"){
+      $("#skeleton").show
+    }
+    else if(this.characterLocation().monsters[3].name == "Goblin"){
+      $("#golem").show
+    }
+    else if(this.characterLocation().monsters[4].name == "Goblin"){
+      $("#dragon").show
+    }
+  }
+  else if(this.characterLocation().monsters[0]){
+    if(this.characterLocation().monsters[0].name == "Goblin"){
+      $("#deadGoblin").show
+    }
+    else if(this.characterLocation().monsters[1].name == "Goblin"){
+      $("#deadOgre").show
+    }
+    else if(this.characterLocation().monsters[2].name == "Goblin"){
+      $("#deadSkeleton").show
+    }
+    else if(this.characterLocation().monsters[3].name == "Goblin"){
+      $("#deadGolem").show
+    }
+    else if(this.characterLocation().monsters[4].name == "Goblin"){
+      $("#deadDragon").show
+    };
+  };
+};
 
 Game.prototype.displayWinScreen = function(){
   if(this.monsters[4].hp < 1){
