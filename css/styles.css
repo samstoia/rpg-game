@@ -62,6 +62,12 @@ h3 {
   margin: 11px;
 }
 
+#showName {
+  font-size: 15px;
+}
+#armButton {
+  padding-right: 20px;
+}
 #titleScreen, #deathScreen, #preGameScreen {
   text-align: center;
 }
@@ -88,6 +94,7 @@ h3 {
 
 #itemArea {
   height: 200px;
+  font-size: calc(45px - 2vh);
 }
 
 #visualArea {
@@ -121,7 +128,12 @@ h3 {
   text-align: center;
 }
 
-#userInput, #userName {
+#fightDisplay {
+  font-family: 'Krub', sans-serif;
+  font-size: calc(50px - 2vh);
+}
+
+#userName {
   font-family: 'Krub', sans-serif;
   font-size: calc(50px - 2vh);
   width: 50%;

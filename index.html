@@ -35,7 +35,7 @@
           Sir Jerroth</p>
       </div>
 
-      <form id = "nameForm">
+      <form id="nameForm">
         <input id = "userName" placeholder = "Declare your name!">
         <br>
         <button type="submit" id="submitName">Submit</button>
@@ -45,8 +45,8 @@
     <div id="gameScreen" class="container wrapper">
 
       <div class="storyScreen">
-        <div id="playArea">
-          <div id="topDiv" class="row">
+        <div id="neutralArea">
+          <div class="row">
             <div id="visualArea" class="col-md-3">
               <div id="backgroundPicture" class="row">
                 <img class="visual" src="img/image-placeholder.jpg" alt="An image of a castle">
@@ -54,10 +54,10 @@
               <div id="itemArea" class="row">
                 <table class="table">
                   <tr>
-                    <td><img class="icon" src="img/sword-placeholder.png" alt="A sword icon">Sword</td>
+                    <td><img class="icon" src="img/sword-placeholder.png" alt="A sword icon">Weapon</td>
                   </tr>
                   <tr>
-                    <td><img class="icon" src="img/shield-placeholder.png" alt="A shield icon">Shield</td>                </tr>
+                    <td><img id = "items" class="icon" src="img/potion-placeholder.png" alt="A shield icon">Items</td>                </tr>
                   <tr>
                     <td><img class="icon" src="img/journal-placeholder.png" alt="A scroll icon">Journal</td>
                   </tr>
@@ -71,27 +71,28 @@
               <p>What do you do?</p>
             </div>
           </div>
-          <div id="midDiv" class="row">
-            <div class="col-md-4">
+          <div class="row">
+            <br><br>
+            <div id="name"><span id="showName"></span></div>
+            <div id="userDiv" class="row">
+              <div class="col-md-12">
+                <div id = "fightDisplay">
+                  <p>Health: <span id = "HP"></span><span id = "missingHP"></span></p>
+                </div>
+              </div>
             </div>
-            <div id="actionArea" class="col-md-4">
+            <div id="actionArea" class="col-md-12">
               <button id = "lookButton">Look</button>
+              <button id = "getButton">Take</button>
               <button id = "forwardButton" class = "moveButton">Onward!</button>
               <button id = "backButton" class = "moveButton">Go Back</button>
               <button id = "climbDownButton" class = "moveButton">Climb Down</button>
               <button id = "climbUpButton" class = "moveButton">Climb Up</button>
             </div>
           </div>
-          <div id="userDiv" class="row">
-            <div class="col-md-12">
-              <input type="text" id="userInput" placeholder="What do you want to do?" name="userInput">
-            </div>
-          </div>
         </div>
-      </div>
 
-      <div class="fightScreen">
-        <div id="playArea">
+        <div id="fightArea">
           <div id="topDiv" class="row">
             <div id="visualArea" class="col-md-3">
               <div id="monsterPicture" class="row">
@@ -111,36 +112,27 @@
               </div>
             </div>
             <div id="textArea" class="col-md-8">
-              <p>Duis neque odio, congue egestas lorem quis, varius tincidunt lorem. Duis hendrerit odio et ipsum tristique, et dapibus nulla condimentum. Pellentesque lectus velit, venenatis nec bibendum nec, convallis a nisi. Etiam fringilla rutrum eros, eget pretium tortor porttitor quis. Cras eget magna eget diam vehicula accumsan. Aliquam mollis tincidunt semper. Fusce finibus eros ut diam suscipit, sit amet lobortis dui pellentesque. Etiam non lorem vel ipsum ultrices euismod sit amet ac diam. Nunc tincidunt sem mauris, ac suscipit augue tincidunt sit amet.</p>
+              <p>A great and terrible, but oddlt adorable dragon stands before you.</p>
               <p>. . .</p>
-              <p>Pellentesque ac vehicula lectus. Suspendisse sapien lacus, rhoncus sit amet urna vitae, laoreet pretium nulla. Sed gravida eget urna quis fermentum. Praesent finibus, augue non vestibulum aliquam, orci nunc congue diam, vitae aliquet mauris tellus a velit. Sed at mauris id felis pretium ultricies. Maecenas fermentum nunc sit amet ultrices aliquet. Integer maximus ex in cursus euismod. Suspendisse porttitor metus nec tincidunt sodales. Phasellus et tempus diam, non porttitor diam. Ut vitae neque vel elit interdum convallis eget quis orci. Fusce pretium turpis nec lobortis eleifend.</p>
               <p>What do you do?</p>
             </div>
           </div>
           <div id="midDiv" class="row">
-            <div class="col-md-4">
-            </div>
-            <div id="actionArea" class="col-md-4">
+            <div id="actionArea" class="col-md-12">
               <button id = "lookButton">Look</button>
+              <button id = "getButton">Take</button>
               <button id = "fightButton">Fight</button>
               <button id = "fleeButton">Flee</button>
             </div>
           </div>
-          <div id="userDiv" class="row">
-            <div class="col-md-12">
-              <input type="text" id="userInput" placeholder="What do you want to do?" name="userInput">
-            </div>
-          </div>
         </div>
       </div>
-
-    </div>
-
-    <div id="deathScreen" class="wrapper">
-      <h1 id="deathNote">You have perished, but death is not the end. Try again, brave adventurer, if you dare...</h1>
-        <button id="startGame" type="button" name="button">Start</button>
-        <a href="index.html"><h3>Allons-y!</h3></a>
+      <div id="deathScreen" class="wrapper">
+        <h1 id="deathNote">You have perished, but death is not the end. Try again, brave adventurer, if you dare...</h1>
+          <button id="startGame" type="button" name="button">Start</button>
+          <a href="index.html"><h3>Allons-y!</h3></a>
       </div>
+    </div>
 
   </body>
 </html>
