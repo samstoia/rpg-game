@@ -32,6 +32,9 @@ Character.prototype.fight = function(monster){
     console.log("The monster swings for " + monster.damage + ". You have " + this.hp + "hp.");
     this.checkDead();
   }
+  else{
+    monster.dropLoot();
+  }
 
 };
 
