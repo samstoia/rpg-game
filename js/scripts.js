@@ -9,6 +9,7 @@ map[11].spawnMonster(5)
 map[5].spawnItem(4);
 map[2].spawnFriendly(0);
 map[12].spawnFriendly(1);
+map[6].spawnFriendly(2);
 
 $(function(){
   $("#titleScreen").fadeIn();
@@ -150,17 +151,33 @@ $("#nameForm").submit(function(){
         wizard.talk("Bring me a sword, I have a trick or two up my sleeve.")
       }
     }
+    else if(game.characterLocation().friendlies[0] == captive){
+      captive.talk("Will you please untie me?");
+      $("#yesButton").show();
+      $("#noButton").show();
+    }
   });
 
   $("#yesButton").click(function(){
-    character.quest = true;
-    $("#yesButton").hide();
-    $("#noButton").hide();
-    npc.talk("Thank you! I knew someone would come along that I could count on!");
+    if(character.location == 2){
+      character.quest = true;
+      $("#yesButton").hide();
+      $("#noButton").hide();
+      npc.talk("Thank you! I knew someone would come along that I could count on!");
+    }
+    else if(character.location == 6){
+      $("#location").text("You reach down and untie the captive.");
+      captive.talk("Thank you!! If you're going to go any further, you'll want to pay my friend a visit at the top of the mountain.");
+    }
   });
 
   $("#noButton").click(function(){
-    npc.talk("Some help you are. Take some time to think about it... will you change your mind?")
+    if(character.location == 2){
+      npc.talk("Some help you are. Take some time to think about it... will you change your mind?");
+    }
+    else if(character.location == 6){
+      captive.talk("Wow, I never knew anybody could be so unhelpful. Please change your mind?")
+    }
   });
 
   $("#restButton").click(function(){

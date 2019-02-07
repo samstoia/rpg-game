@@ -55,6 +55,7 @@ Game.prototype.displayAll = function(){
   });
   currentLocation.friendlies.forEach(function(friendly){
     friendly.displayNPC();
+    //$("#talkButton").show()
   });
   if(!player.inCombat){
     currentLocation.getExits();
@@ -71,6 +72,9 @@ Game.prototype.displayAll = function(){
       $("#useButton").show();
       $("#itemName").text(player.inventory[i].name);
       break;
+    }
+    else{
+      $("#useButton").hide();
     }
   };
 

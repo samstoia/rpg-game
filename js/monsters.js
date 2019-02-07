@@ -38,6 +38,9 @@ Monster.prototype.dropLoot = function(){
       game.characters[0].displayGetButton()
     }
   }
+  else if(game.characterLocation().monsters[0].name == "Troll"){
+    $("#talkButton").show();
+  }
 };
 
 Monster.prototype.displayMonster = function(){
@@ -69,10 +72,12 @@ game.getMonster(skeleton);
 game.getMonster(ogreLord);
 game.getMonster(dragon);
 
-function NPC(name, hp, damage, inventory, location, friendly){
+function NPC(name, hp, damage, description, action, inventory, location,){
   this.name = name,
   this.hp = hp,
   this.damage = damage,
+  this.description = description,
+  this.action = action,
   this.inventory = [],
   this.location = location,
   this.friendly = true
@@ -102,7 +107,7 @@ NPC.prototype.displayNPC = function(){
   if(this && !this.checkDead()){
       //$("#fightButton").show();
       $("#fightLog").append(this.name);
-      $("#monsters").append("A friendly woman named " + this.name.toLowerCase() + " introduces herself."+ "<br><br>")
+      $("#monsters").append(this.description + this.name.toLowerCase() + this.action+ "<br><br>")
   }
   else if(this && this.checkDead()){
     $("#fightLog").append(this.name +  ": corpse"  + "<br><br>");
@@ -125,10 +130,12 @@ NPC.prototype.talk = function(output){
 }
 
 
-var npc = new NPC("Georgia", 100, 5);
-var wizard = new NPC("Wizard", 100, 5);
+var npc = new NPC("crone", 100, 5, "A haggard old ", " waves you to come over.");
+var wizard = new NPC("wizard", 100, 5, "What appears to be a ", " greets you at the mountain top.");
+var captive = new NPC("captive", 100, 5, "A ", " lies tied up behind the troll.");
 npc.inventory.push(sword);
 npc.location = 3;
 wizard.location = 12;
 game.getFriendly(npc);
 game.getFriendly(wizard);
+game.getFriendly(captive);
