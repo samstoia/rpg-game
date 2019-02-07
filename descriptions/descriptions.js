@@ -33,6 +33,27 @@ var itemActions = [
   " lies nearby."
 ];
 
+// Location Descriptions, Main and Array
+var forestMainDesc = "";
+
+var forestDescriptions = "";
+
+var townMainDesc = "";
+
+var townDescriptions = "";
+
+var caveMainDesc = "";
+
+var caveDescriptions = "";
+
+var mountainsideMainDesc = "";
+
+var mountainsideDescriptions = "";
+
+var springsMainDesc = "";
+
+var springsDescriptions = "";
+
 // Descriptive Items
 var bareHandsDesc = "There are tales of great warriors who take down beasts with only their hands, with the strength to tear skull from spine and put an end to the plaguing horrors. Your hands don’t do that, you hit things and it hurts when you do."
 
