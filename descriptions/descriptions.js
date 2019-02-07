@@ -86,11 +86,11 @@ var eventWizardResponse = "'I have no item to give you hero, but I can tell you 
 
 var eventWizardLeave = "You leave the man tied up. He curses you with pure stupidity.";
 
-var eventWizardSummit = "You meet the old man again, he's a wizard Harry.";
+var eventWizardSummit = "Near the summit spring you see the familiar sight of the old man you saved from the troll. He's excited and enthusiastic to see you, gesturing you over.";
 
-var eventWizardBless = "He makes your sword magic.";
+var eventWizardBless = "'Hero! You made it here!' He exclaims, before looking at your sword. 'Ugh. HER. Here, let me make this blade of yours much better...' He takes the sword from you without even asking, and taps the length of it until it glows. The man, a wizard apparently, hands the blade back to you. 'May it serve you well hero!'";
 
-var eventWizardHeal = "He tells you about the healing water and it heals you and it's amazing.";
+var eventWizardHeal = "The old man shows you to the spring, telling you that the water is magic, a sacred pool of healing. Should you drink only drops of the water, you can be healed, but the water must be drunk immediately from scooping it from the pool. You lean down and cup your hands, pulling water from the spring to sip at it. Immediately you feel healthier than youu had ever been. No peasant had ever felt this amazing before.";
 
 // Location Descriptions, Main and Array
 var mapDesc = "From all directions you stand amid dense columns of trees, many with great roots that are blanketed with old dry leaves and pine needles. The uneven terrain makes it difficult even for experienced travelers to get a proper foothold. There is a faint path, scattered with pebbles sunk into the dirt, this road too is uneven but at least it’s been well trailed. You cannot go back from here, you know you must go forward.";
