@@ -103,7 +103,7 @@ var mapFourForest = "A small creek runs between the crevices of the tree bases, 
 
 var mapFiveTown = "This gated communal has seen much strife, some buildings are scorched while others are left in ruin. Yet the people seem content, even happy, as children play in the town square and the little market bustles with business. Despite the scars left by the dragon, this town has persevered and steeled itself. A testament to the citizens here.";
 
-var mapSixTown = "From the town you return to the forest along a road made of stone, though it is worn and ancient. It trails towards the hillsides away from the town, scattered stone foundations reveal the history of this land and all that has been lost. The view of the township and the safety its simple walls gets further from you, and soon you are fending for yourself once more.";
+var mapSixForest= "From the town you return to the forest along a road made of stone, though it is worn and ancient. It trails towards the hillsides away from the town, scattered stone foundations reveal the history of this land and all that has been lost. The view of the township and the safety its simple walls gets further from you, and soon you are fending for yourself once more.";
 
 var mapSevenHill = "The forest begins to slope upwards, and ahead is the the range of mountains known to be the home for creatures of every horror. And atop the hills is the dragon’s mountain, a towering stone mountain, a suitable throne for a monster who claims dominance over all others. The hike will be long and wearing, yet this journey must end, with the slaying of the fire breathing beast.";
 

@@ -14,18 +14,24 @@ Go'Leir is a text-based adventure role-playing game designed using HTML and Java
 
 ## Known Bugs
 
-* Only bugs, this is all bugs.
+* UI bug: buttons disappear.
+* UI/JS bug: descriptions do not match up.
 
 ## Specifications
 
-| Behavior | Output | Input |
+| Behavior | Input | Output |
 |----------|:------:|:-----:|
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
+| Game recognizes player by name | Name | Add Name to Game |
+| Player experiences the intro exhibition | Start Game | Story Text |
+| Move forward | Click Onward | Location Changes to Next Area |
+| Move backward | Click Go Back | Location Changes to Previous Area |
+| Player attacks monster | Click Fight! | Monster Damaged |
+| Monster attacks player | Monster Turn | Player Damaged |
+| Functional battle | Player/Monster Turn Change | Dynamic Damage |
+| Player interaction with NPCs | Click Talk | NPC Dialogue |
+| Player can pick up and use items | Click Get / Use | Selected Item Retrieved or Used |
+| Player completes quests | Perform Quest | Receive Reward |
+| Player experiences the epilogue | Win Game | Story Text |
 
 ## Setup and Use
 
@@ -52,7 +58,7 @@ Visit one of our [GH-Page hosted sites](https://samstoia.github.io/rpg-game/) su
 * HTML/CSS/Bootstrap
 * JavaScript/jQuery-3.3.1
 * GitHub Pages
-* TODO Artwork Programs
+* Photopea
 
 ## Contributors
 
@@ -76,20 +82,19 @@ Note: While all contributors have made full-stack additions to the code, each pa
 | Story | |◈|◈| |
 | User Interface | |◈| |◈|
 | **Writing** |
-| Flavor Text | | | | |
-| Story Text | | | | |
+| Flavor Text |◈| | |◈|
+| Story Text | |◈| |◈|
 | **Programming** |
 | Back-End |◈| |◈| |
 | Front-End | |◈| |◈|
 | Refractoring | | |◈| |
 | **Graphics** |
-| Backgrounds | |◈| | |
+| Backgrounds | | | | |
+| Characterrs | |◈| | |
 | Icons | |◈| | |
 | **Quality Assurance** |
 | Documentation | | | |◈|
-| Testing | | | | |
-| **Special Thanks** |
-| | | | | | |
+| Testing |◈|◈|◈| | |
 
 ## Support and contact details
 
