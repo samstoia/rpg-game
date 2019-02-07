@@ -51,7 +51,6 @@ $("#nameForm").submit(function(){
 
   $("#getButton").click(function(){
     character.get();
-    $("#items").text('')
     $("#getButton").hide();
   });
 
@@ -68,7 +67,7 @@ $("#nameForm").submit(function(){
   });
 
   $("#useButton").click(function(){
-    character.useItem(character.findConsumable());
+    character.useItem(character.findConsumable())
   });
 
   $("#fightButton").click(function(){
@@ -105,9 +104,13 @@ $("#nameForm").submit(function(){
       npc.talk("Thank you for your help!!");
     }
     else{
-      if(character.inventory[0]){
+      if(character.findQuestItem().name == "Quarterstaff"){
         character.giveItem(npc);
         npc.talk("This is great! I was using this sword but it's too heavy as a walking stick. Here, you take it instead.")
+      }
+      else if(character.findQuestItem().name == "walking stick"){
+        character.giveItem(npc)
+        npc.talk("This is even better than the one I had!")
       }
       else{
         if(character.weapon[0].name == "Quarterstaff"){
