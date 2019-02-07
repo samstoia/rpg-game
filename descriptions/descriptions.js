@@ -33,15 +33,6 @@ var itemActions = [
   " lies nearby."
 ];
 
-// Exhibition
-var intro = "You set out from your village, at the urging of the town elders. This is what must be done, if it can be done at all. Your childhood friend and the lord's daughter, Emilie Hillinder, has been taken by the legendary flying beast, Go'Leir. A dragon famous in stories to frighten children, but a name that makes knights shake in their boots. None will come to save the daughter of a lowly lord. And so it has fallen to you. You who are the fastest, strongest, and most clever in your village. Even if youu weren't, she is a friend, and she will not be left to be the dragon's meal.";
-
-var ending = "Go'Leir, the shadow of death and fiery beast that brings only destruction. The beast of all doom lays dead, a miserable corpse of evil glory. Amid the treasure you hear a cry for help, it's the lord's daughter. You rush over to the pile of gold, knocking crowns and coin to the ground, taking hold of the outreached hand. You pull, and then again. Both you and she struggle, but soon she is free.";
-
-var ending2 = "Emilie looks worse for wear, having hid in the dragon's treasure to avoid her fate. She embraces you and holds on tight for several moments. When she lets you go, she reaches for the magic sword and looks at it, and then to the dead Go'Leir. Something in her has awoken, the same thing that awoke in you when she was taken.";
-
-var ending3 = "Maybe together, the world doesn't have to be such a bleak place."
-
 // Monster Descriptions
 var monsterOgre = "An ugly sight of a one-eyed ogre stomps in front of you. He gurgles and belches, picking at the empty socket of his eye. Despite seeming worse for wear, he is armed with a bloodied club and ready to smash you.";
 
