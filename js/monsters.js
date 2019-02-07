@@ -45,7 +45,7 @@ Monster.prototype.displayMonster = function(){
   else if(this && this.checkDead()){
     $("#fightLog").append(this.name +  ": corpse"  + "<br><br>");
     $("#monsters").append("A " + this.name.toLowerCase() + " is dead. <br><br>")
-    this.dropLoot()
+
   }
   else{
     $("#fightButton").hide();
@@ -112,7 +112,8 @@ NPC.prototype.displayNPC = function(){
 NPC.prototype.giveItem = function(){
   game.characters[0].inventory.unshift(this.inventory[0])
   this.inventory.shift()
-  game.characters[0].quest = false;
+  game.characters[0].quest = "complete";
+  game.displayAll();
 }
 
 NPC.prototype.talk = function(output){

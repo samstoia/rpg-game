@@ -26,7 +26,7 @@ $("#nameForm").submit(function(){
 });
 
 
-  // $("button").hide()
+  $("button").hide();
   $("#startGame").show();
   $("#submitName").show();
   game.displayAll();
@@ -96,6 +96,9 @@ $("#nameForm").submit(function(){
       $("#noButton").show();
       $("#fightButton").hide();
       $("#talkButton").hide();
+    }
+    else if(character.quest == "complete"){
+      npc.talk("Thank you for your help!!");
     }
     else{
       if(character.inventory[0]){
