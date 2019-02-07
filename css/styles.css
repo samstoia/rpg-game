@@ -5,10 +5,10 @@ body {
   padding: 50px;
   font-size: calc(30px - 2vh);
 }
-
+/*
 .wrapper {
   display: none;
-}
+}*/
 
 table {
   border: 3px solid white;
@@ -51,12 +51,24 @@ h3 {
   max-height: 350px;
 }
 
+.monster {
+  border: 2px solid;
+  padding: 5px;
+  max-height: 200px;
+}
+
 .icon {
   max-height: 20px;
   margin: 11px;
 }
 
-#titleScreen, #deathScreen {
+#showName {
+  font-size: 15px;
+}
+#armButton {
+  padding-right: 20px;
+}
+#titleScreen, #deathScreen, #preGameScreen {
   text-align: center;
 }
 
@@ -82,6 +94,7 @@ h3 {
 
 #itemArea {
   height: 200px;
+  font-size: calc(45px - 2vh);
 }
 
 #visualArea {
@@ -91,6 +104,7 @@ h3 {
   border-style: double;
   line-height: 400px
 }
+
 #intro {
   margin: 10px;
   text-align: justify;
@@ -105,7 +119,7 @@ h3 {
   height: 600px;
   border-style: double;
   padding: 20px;
-  /*overflow: scroll;*/
+  overflow-y: scroll;
   font-family: 'Krub', sans-serif;
   font-size: 20px;
 }
@@ -114,7 +128,14 @@ h3 {
   text-align: center;
 }
 
-#userInput {
+#fightDisplay {
+  font-family: 'Krub', sans-serif;
+  font-size: calc(50px - 2vh);
+}
+
+#userName {
+  font-family: 'Krub', sans-serif;
+  font-size: calc(50px - 2vh);
   width: 50%;
   text-align: center;
   padding: 5px;
