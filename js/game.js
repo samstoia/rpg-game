@@ -78,9 +78,17 @@ Game.prototype.displayAll = function(){
     $("#disarmButton").show();
     $("#disarmName").text(player.weapon[0].name);
   };
-  if(currentLocation.location == 2){
+  if(currentLocation.location == 2 || currentLocation.location == 12){
     $("#talkButton").show();
   }
+  $("#inventory").text('')
+  for(var i = 0; i < player.inventory.length; i++){
+    $("#inventory").append(player.inventory[i].name + "<br>")
+  }
+  if(currentLocation == 5){
+    $("#restButton").show();
+  }
+  $("#lookButton").show();
 
 }
 

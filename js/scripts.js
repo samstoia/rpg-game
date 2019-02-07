@@ -8,6 +8,7 @@ map[7].spawnMonster(4);
 map[11].spawnMonster(5)
 map[5].spawnItem(4);
 map[2].spawnFriendly(0);
+map[12].spawnFriendly(1);
 
 $(function(){
   $("#titleScreen").fadeIn();
@@ -36,7 +37,12 @@ $("#nameForm").submit(function(){
   });
 
   $("#forwardButton").click(function(){
-    character.move("forward");
+    if(!map[character.location].monsters[0] || map[character.location].monsters[0].checkDead()){
+      character.move("forward");
+    }
+    else{
+      $("#location").text("The " + map[character.location].monsters[0].name.toLowerCase() + " blocks your way.")
+    }
   });
 
   $("#climbDownButton").click(function(){
@@ -45,8 +51,13 @@ $("#nameForm").submit(function(){
   });
 
   $("#climbUpButton").click(function(){
-    character.move("forward");
-    character.move("forward");
+    if(!map[character.location].monsters[0] || map[character.location].monsters[0].checkDead()){
+      character.move("forward");
+      character.move("forward");
+    }
+    else{
+      $("#location").text("The " + map[character.location].monsters[0].name.toLowerCase() + " blocks your way.")
+    }
   });
 
   $("#getButton").click(function(){
@@ -93,37 +104,52 @@ $("#nameForm").submit(function(){
   });
 
   $("#talkButton").click(function(){
-    if(!character.quest){
-      npc.talk("Help! I've lost my walking stick! Will You help me get it back?");
-      $("#yesButton").show();
-      $("#noButton").show();
-      $("#fightButton").hide();
-      $("#talkButton").hide();
-    }
-    else if(character.quest == "complete"){
-      npc.talk("Thank you for your help!!");
-    }
-    else{
-      if(character.findQuestItem().name == "Quarterstaff"){
-        character.giveItem(npc);
-        npc.talk("This is great! I was using this sword but it's too heavy as a walking stick. Here, you take it instead.")
+    if(game.characterLocation().friendlies[0] == npc){
+      if(!character.quest){
+        npc.talk("Help! I've lost my walking stick! Will You help me get it back?");
+        $("#yesButton").show();
+        $("#noButton").show();
+        $("#fightButton").hide();
+        $("#talkButton").hide();
       }
-      else if(character.findQuestItem().name == "walking stick"){
-        character.giveItem(npc)
-        npc.talk("This is even better than the one I had!")
+      else if(character.quest == "complete"){
+        npc.talk("Thank you for your help!!");
       }
       else{
-        if(character.weapon[0].name == "Quarterstaff"){
-          npc.talk("That's fine staff you have in your hands... looks nice and light, much lighter than what I've been using...")
+        if(character.findQuestItem().name == "Quarterstaff"){
+          character.giveItem(npc);
+          npc.talk("This is great! I was using this sword but it's too heavy as a walking stick. Here, you take it instead.")
         }
-        else if(character.weapon[0].name == "walking stick"){
-          npc.talk("That looks just like the one I used to have!")
+        else if(character.findQuestItem().name == "walking stick"){
+          character.giveItem(npc)
+          npc.talk("This is even better than the one I had!")
         }
         else{
-        npc.talk("Where's my walking stick?");
+          if(character.weapon[0].name == "Quarterstaff"){
+            npc.talk("That's fine staff you have in your hands... looks nice and light, much lighter than what I've been using...")
+          }
+          else if(character.weapon[0].name == "walking stick"){
+            npc.talk("That looks just like the one I used to have!")
+          }
+          else{
+          npc.talk("Where's my walking stick?");
+          };
         };
       };
-    };
+    }
+    else if(game.characterLocation().friendlies[0] == wizard){
+      if(character.weapon[0] == sword || character.inventory.includes(sword)){
+      character.getFortified();
+      wizard.talk(eventWizardBless);
+      character.loseBonusDamage(sword);
+      sword.damage = sword.damage * 2;
+      character.addBonusDamage(sword);
+      $("#location").text("The wizard beckons you to drink from a spring and fortify your bones. You do so and feel stronger than ever!")
+      }
+      else{
+        wizard.talk("Bring me a sword, I have a trick or two up my sleeve.")
+      }
+    }
   });
 
   $("#yesButton").click(function(){
@@ -135,6 +161,19 @@ $("#nameForm").submit(function(){
 
   $("#noButton").click(function(){
     npc.talk("Some help you are. Take some time to think about it... will you change your mind?")
+  });
+
+  $("#restButton").click(function(){
+    character.rest();
+    $("#location").text("You feel well rested and healthy again.")
+  });
+
+  $("#lookButton").click(function(){
+    game.displayAll();
+    if(game.characterLocation().location == 10){
+      $("#forwardButton").show();
+      $("#location").append("<br>You move some bushes and see a hidden entrance leading into a cave.");
+    }
   });
 
 });
