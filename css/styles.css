@@ -5,10 +5,10 @@ body {
   padding: 50px;
   font-size: calc(30px - 2vh);
 }
-/*
+
 .wrapper {
   display: none;
-}*/
+}
 
 table {
   border: 3px solid white;
@@ -57,7 +57,7 @@ h3 {
 .visual {
   border: 2px solid;
   padding: 5px;
-  max-height: 350px;
+  max-width: 250px;
 }
 
 .monster {
