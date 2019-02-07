@@ -189,6 +189,8 @@ Character.prototype.loseBonusDamage = function(item){
 
 Character.prototype.useItem = function(item){
   this.heal(item.damage);
+  this.inventory.splice(this.inventory.indexOf(item), 1);
+  game.displayAll();
 };
 
 Character.prototype.findConsumable = function(){
