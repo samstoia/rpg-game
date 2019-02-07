@@ -70,6 +70,11 @@ h3 {
   max-height: 30px;
   margin: 11px;
 }
+.winNote {
+  text-align: justify;
+  font-family: 'Cinzel', serif;
+  font-size: 50px;
+}
 
 #missingHP {
   opacity: .25;
@@ -81,7 +86,7 @@ h3 {
 #armButton {
   padding-right: 20px;
 }
-#titleScreen, #deathScreen, #preGameScreen {
+#titleScreen, #deathScreen, #preGameScreen, #winScreen {
   text-align: center;
 }
 
@@ -163,6 +168,7 @@ h3 {
 }
 
 #deathNote {
+  text-align: justify;
   font-family: 'Cinzel', serif;
   font-size: 50px;
 }
