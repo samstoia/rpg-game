@@ -154,6 +154,12 @@ h3 {
   padding: 5px;
   margin: 10px;
 }
+#showName {
+  font-family: 'Krub', sans-serif;
+  font-size: calc(50px - 2vh);
+  width: 50%;
+  text-align: center;
+}
 
 #deathNote {
   font-family: 'Cinzel', serif;
