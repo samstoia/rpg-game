@@ -57,7 +57,7 @@
                     <td><img class="icon" src="img/sword-placeholder.png" alt="A sword icon">Weapon: <span id = "displayWeapon"></span></td>
                   </tr>
                   <tr>
-                    <td><img id = "items" class="icon" src="img/potion-placeholder.png" alt="A shield icon">Items</td>                </tr>
+                    <td><img id = "items" class="icon" src="img/potion-placeholder.png" alt="A shield icon">Items: <span id="itemName"></span></td>                </tr>
                   <tr>
                     <td><img class="icon" src="img/journal-placeholder.png" alt="A scroll icon">Journal</td>
                   </tr>
@@ -65,17 +65,29 @@
               </div>
             </div>
             <div id="textArea" class="col-md-8">
-              <p>Duis neque odio, congue egestas lorem quis, varius tincidunt lorem. Duis hendrerit odio et ipsum tristique, et dapibus nulla condimentum. Pellentesque lectus velit, venenatis nec bibendum nec, convallis a nisi. Etiam fringilla rutrum eros, eget pretium tortor porttitor quis. Cras eget magna eget diam vehicula accumsan. Aliquam mollis tincidunt semper. Fusce finibus eros ut diam suscipit, sit amet lobortis dui pellentesque. Etiam non lorem vel ipsum ultrices euismod sit amet ac diam. Nunc tincidunt sem mauris, ac suscipit augue tincidunt sit amet.</p>
-              <p>. . .</p>
-              <p>Pellentesque ac vehicula lectus. Suspendisse sapien lacus, rhoncus sit amet urna vitae, laoreet pretium nulla. Sed gravida eget urna quis fermentum. Praesent finibus, augue non vestibulum aliquam, orci nunc congue diam, vitae aliquet mauris tellus a velit. Sed at mauris id felis pretium ultricies. Maecenas fermentum nunc sit amet ultrices aliquet. Integer maximus ex in cursus euismod. Suspendisse porttitor metus nec tincidunt sodales. Phasellus et tempus diam, non porttitor diam. Ut vitae neque vel elit interdum convallis eget quis orci. Fusce pretium turpis nec lobortis eleifend.</p>
+              <div  id = "locationDisplayBox">
+                <div id = "locationDisplay">
+                  <span id = "location"></span>
+                </div>
+              </div>
+              <br><hr>
+              <div id = "monsters"></div>
+              <br><hr>
+              <div id = "friendlies"></div>
+              <br><hr>
+              <div id="fightLog"></div>
+              <br><hr>
+              <div id = "items"></div>
+
               <p>What do you do?</p>
             </div>
           </div>
           <div class="row">
             <br><br>
-            <div id="name"><span id="showName"></span></div>
+
             <div id="userDiv" class="row">
               <div class="col-md-12">
+                <div id="name"><span id="showName"></span></div>
                 <div id = "fightDisplay">
                   <p>Health: <span id = "HP"></span><span id = "missingHP"></span></p>
                 </div>
