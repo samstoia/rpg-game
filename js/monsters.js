@@ -96,7 +96,7 @@ NPC.prototype.checkDead = function(){
 
 NPC.prototype.displayNPC = function(){
   if(this && !this.checkDead()){
-      $("#fightButton").show();
+      //$("#fightButton").show();
       $("#fightLog").append(this.name);
       $("#monsters").append("A friendly woman named " + this.name.toLowerCase() + " introduces herself."+ "<br><br>")
   }
