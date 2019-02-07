@@ -126,6 +126,9 @@ NPC.prototype.talk = function(output){
 
 
 var npc = new NPC("Georgia", 100, 5);
+var wizard = new NPC("Wizard", 100, 5);
 npc.inventory.push(sword);
 npc.location = 3;
+wizard.location = 12;
 game.getFriendly(npc);
+game.getFriendly(wizard);

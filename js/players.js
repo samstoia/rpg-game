@@ -1,5 +1,5 @@
 //              PLAYER CHARACTER CONSTRUCTOR AND METHODS
-function Character(name, hp, damage, strength, dexterity, intelligence, courage, swordsmanship, tactics, hiding, weapon, inventory, inCombat, quest, location, previousLocations){
+function Character(name, hp, damage, strength, dexterity, intelligence, courage, swordsmanship, tactics, hiding, weapon, inventory, inCombat, quest, isFortified, takeDamageMultiplier, location, previousLocations){
   this.name = name,
   this.hp = hp,
   this.damage = damage,
@@ -13,7 +13,9 @@ function Character(name, hp, damage, strength, dexterity, intelligence, courage,
   this.weapon = [bareHands],
   this.inventory = [],
   this.inCombat = !!inCombat,
-  this.quest = !!inCombat,
+  this.quest = !!quest,
+  this.isFortified = !!isFortified,
+  this.takeDamageMultiplier = 1;
   this.location = 0,
   this.previousLocations = []
 };
@@ -48,7 +50,7 @@ Character.prototype.checkDead = function(){
 };
 
 Character.prototype.takeDamage = function(damage){ //  PLAYER TAKE DAMAGE FUNCTION
-  this.hp -= damage;
+  this.hp -= (damage * this.takeDamageMultiplier);
   this.displayAll();
 };
 
@@ -163,7 +165,7 @@ Character.prototype.move = function(input){   //       !!! NEEDS A BUTTON ON THE
 Character.prototype.displayGetButton = function(){  //  CREATED AS A WORKAROUND FOR MONSTER.DROPLOOT - DISPLAY ALL WAS CALLING CHECKDEAD WHICH WAS BEING USED AT THE TIME IN DROPLOOT - MAY BE REPLACEABLE NOW
   $("#getButton").show();
   $("#getItemName").text(game.characterLocation().items[0].name);
-  $("#items").text(game.characterLocation().items[0].name);
+  $("#items").text("A " + game.characterLocation().items[0].name + " lies near the corpse.");
 };
 
 Character.prototype.get = function(){
@@ -196,6 +198,17 @@ Character.prototype.findConsumable = function(){
     };
   };
 };
+
+Character.prototype.rest = function(){
+  this.hp = 100;
+}
+Character.prototype.getFortified = function(){
+  this.hp = 100;
+  if(!this.isFortified){
+    this.takeDamageMultiplier = .5;
+  }
+  game.displayAll();
+}
 
 
 game.getPlayer();
