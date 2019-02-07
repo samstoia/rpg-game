@@ -63,7 +63,7 @@ var goblin = new Monster("Goblin", 64, 18);
 var ogre = new Monster("Ogre", 83, 15);
 var skeleton = new Monster("Skeleton", 35, 9);
 var golem = new Monster("Golem", 109, 17);
-var dragon = new Monster("Dragon", 200, 25)
+var dragon = new Monster("Dragon", 200, 40)
 game.getMonster(goblin);
 game.getMonster(ogre);
 game.getMonster(skeleton);
