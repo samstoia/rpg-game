@@ -15,11 +15,10 @@ function Armor(name, rating, dexPenalty){
   this.dexPenalty = dexPenalty
 }
 //             HEALING ITEM CONSTRUCTOR AND METHODS
-function Item(name, type, damage, healing){
+function Item(name, damage){
   this.name = name,
-  this.type = type,
-  this.damage = damage,
-  this.healing = healing
+  this.damage = damage
+
 }
 
 
@@ -34,6 +33,9 @@ Item.prototype.displayItem = function(){
   };
 };
 
-var bareHands = new Item("Bare hands", "none", 10, 3)
-var sword = new Item("Sword", "ruin", 10, 3, 10, "Dragon Slaying");
+var bareHands = new Item("Bare hands", 10)
+var sword = new Item("Sword", 10);
+var staff = new Item("Quarterstaff", 4)
+game.getItem(bareHands);
 game.getItem(sword);
+game.getItem(staff);

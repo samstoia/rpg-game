@@ -6,7 +6,7 @@ map[9].spawnMonster(3);
 map[8].spawnMonster(0);
 map[7].spawnMonster(4);
 map[11].spawnMonster(5)
-map[4].spawnItem(0);
+//map[4].spawnItem(1);
 map[2].spawnFriendly(0);
 
 $(function(){
@@ -59,7 +59,13 @@ $("#nameForm").submit(function(){
   $("#armButton").click(function(){
     character.armWeapon(character.inventory[0]);
     $("#armButton").hide();
-  })
+    game.displayAll();
+  });
+
+  $("#disarmButton").click(function(){
+    character.disarmWeapon();
+    $("#disarmButton").hide();
+  });
 
   $("#fightButton").click(function(){
     $("#forwardButton").hide();
@@ -82,4 +88,35 @@ $("#nameForm").submit(function(){
     $("#userInput").val('')
     alert(userInput);
   });
+
+  $("#talkButton").click(function(){
+    if(!character.quest){
+      npc.talk("Help! I've lost my walking stick! Will You help me get it back?");
+      $("#yesButton").show();
+      $("#noButton").show();
+      $("#fightButton").hide();
+      $("#talkButton").hide();
+    }
+    else{
+      if(character.inventory[0]){
+        character.giveItem(npc);
+        npc.talk("This is great! I was using this sword but it's too heavy as a walking stick. Here, you take it instead.")
+      }
+      else{
+        npc.talk("Where's my walking stick?");
+      };
+    };
+  });
+
+  $("#yesButton").click(function(){
+    character.quest = true;
+    $("#yesButton").hide();
+    $("#noButton").hide();
+    npc.talk("Thank you! I knew someone would come along that I could count on!");
+  });
+
+  $("#noButton").click(function(){
+    npc.talk("Some help you are. Take some time to think about it... will you change your mind?")
+  });
+
 });
