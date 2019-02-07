@@ -29,9 +29,13 @@ Monster.prototype.checkDead = function(){
 Monster.prototype.dropLoot = function(){
   if(game.characterLocation().location == 4){
     if(character.quest == true){
-      game.characterLocation().spawnItem(2)
+      game.characterLocation().spawnItem(2);
       game.characters[0].displayGetButton();
 
+    }
+    else{
+      game.characterLocation().spawnItem(3);
+      game.characters[0].displayGetButton()
     }
   }
 };

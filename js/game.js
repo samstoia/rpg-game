@@ -41,33 +41,47 @@ Game.prototype.clearDisplays = function(){
 Game.prototype.displayAll = function(){
 
   this.clearDisplays();
-  this.characters[0].displayAll();
-  $("#location").text(this.characterLocation().description);
+  var player = this.characters[0]
+  var currentLocation = this.characterLocation()
 
-  this.characterLocation().items.forEach(function(item){
+  player.displayAll();
+  $("#location").text(currentLocation.description);
+
+  currentLocation.items.forEach(function(item){
     item.displayItem();
   });
-  this.characterLocation().monsters.forEach(function(monster){
+  currentLocation.monsters.forEach(function(monster){
     monster.displayMonster();
   });
-  this.characterLocation().friendlies.forEach(function(friendly){
+  currentLocation.friendlies.forEach(function(friendly){
     friendly.displayNPC();
   });
-  if(!this.characters[0].inCombat){
-    this.characterLocation().getExits();
+  if(!player.inCombat){
+    currentLocation.getExits();
   }
-  if(this.characters[0].inventory[0]){
-    $("#armButton").show();
+  for(var i = 0; i < player.inventory.length; i++){
+    if(player.inventory[i].weapon){
+      $("#armButton").show();
+      $("#weaponName").text(player.inventory[i].name);
+      break;
+    }
   };
-  if(this.characters[0].weapon[1]){
+  for(var i = 0; i < player.inventory.length; i++){
+    if(player.inventory[i].consumable){
+      $("#useButton").show();
+      $("#itemName").text(player.inventory[i].name);
+      break;
+    }
+  };
+
+  if(player.weapon[1]){
     $("#disarmButton").show();
+    $("#disarmName").text(player.weapon[0].name);
   };
-  if(this.characterLocation().location == 2){
+  if(currentLocation.location == 2){
     $("#talkButton").show();
   }
-  if(this.characters[0].weapon[1]){
-    $("#disarmButton").show();
-  }
+
 }
 
 //========================================================

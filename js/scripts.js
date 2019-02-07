@@ -6,7 +6,7 @@ map[9].spawnMonster(3);
 map[8].spawnMonster(0);
 map[7].spawnMonster(4);
 map[11].spawnMonster(5)
-//map[4].spawnItem(1);
+map[5].spawnItem(4);
 map[2].spawnFriendly(0);
 
 $(function(){
@@ -53,7 +53,6 @@ $("#nameForm").submit(function(){
     character.get();
     $("#items").text('')
     $("#getButton").hide();
-    character.displayArmButton();
   });
 
   $("#armButton").click(function(){
@@ -65,6 +64,7 @@ $("#nameForm").submit(function(){
   $("#disarmButton").click(function(){
     character.disarmWeapon();
     $("#disarmButton").hide();
+    game.displayAll();
   });
 
   $("#fightButton").click(function(){
@@ -106,7 +106,15 @@ $("#nameForm").submit(function(){
         npc.talk("This is great! I was using this sword but it's too heavy as a walking stick. Here, you take it instead.")
       }
       else{
+        if(character.weapon[0].name == "Quarterstaff"){
+          npc.talk("That's fine staff you have in your hands... looks nice and light, much lighter than what I've been using...")
+        }
+        else if(character.weapon[0].name == "walking stick"){
+          npc.talk("That looks just like the one I used to have!")
+        }
+        else{
         npc.talk("Where's my walking stick?");
+        };
       };
     };
   });
