@@ -15,11 +15,12 @@ function Armor(name, rating, dexPenalty){
   this.dexPenalty = dexPenalty
 }
 //             HEALING ITEM CONSTRUCTOR AND METHODS
-function Item(name, damage, weapon, consumable, ){
+function Item(name, damage, weapon, consumable, questItem){
   this.name = name,
   this.damage = damage,
   this.weapon = !!weapon,
-  this.consumable = consumable
+  this.consumable = !!consumable
+  this.questItem = !!questItem
 
 }
 
@@ -28,6 +29,7 @@ Item.prototype.displayItem = function(){
   if(this){
     $("#items").text("A " + this.name.toLowerCase() + itemActions[Math.floor(Math.random()*itemActions.length)]);
     $("#getButton").show();
+    $("#getItemName").text(this.name)
   }
   else{
     $("#items").text('');
@@ -35,10 +37,10 @@ Item.prototype.displayItem = function(){
   };
 };
 
-var bareHands = new Item("Bare hands", 10, "weapon", '')
+var bareHands = new Item("Bare hands", 10, "weapon", false, true)
 var sword = new Item("Sword", 10, true);
-var stick = new Item("walking stick", 5, true);
-var staff = new Item("Quarterstaff", 4, true)
+var stick = new Item("walking stick", 5, true, false, true);
+var staff = new Item("Quarterstaff", 4, true, false, true)
 var potion = new Item("potion", 10, false, "consumable")
 game.getItem(bareHands);
 game.getItem(sword);

@@ -121,7 +121,7 @@ NPC.prototype.giveItem = function(){
 }
 
 NPC.prototype.talk = function(output){
-  console.log(output);
+  $("#monsters").text(output);
 }
 
 
