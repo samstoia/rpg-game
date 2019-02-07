@@ -142,6 +142,7 @@ h3 {
 }
 
 #fightDisplay {
+  padding-left: 20%;
   font-family: 'Krub', sans-serif;
   font-size: calc(50px - 2vh);
 }
