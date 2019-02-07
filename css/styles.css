@@ -45,6 +45,15 @@ h3 {
   padding: 8px;
 }
 
+.green {
+  color: green;
+}
+.yellow {
+  color: yellow;
+}
+.red {
+  color: red;
+}
 .visual {
   border: 2px solid;
   padding: 5px;
@@ -60,6 +69,10 @@ h3 {
 .icon {
   max-height: 20px;
   margin: 11px;
+}
+
+#missingHP {
+  opacity: .25;
 }
 
 #showName {
