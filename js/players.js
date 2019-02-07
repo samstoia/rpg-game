@@ -162,7 +162,7 @@ Character.prototype.get = function(){
 
 Character.prototype.displayArmButton = function(){
   $("#armButton").show();
-}
+};
 
 
 
@@ -174,8 +174,16 @@ Character.prototype.loseBonusDamage = function(item){
   this.damage -= item.damage;
 };
 
-Character.prototype.drinkPotion = function(item){
+Character.prototype.useItem = function(item){
   this.heal(item.damage);
-}
+};
+
+Character.prototype.findConsumable = function(){
+  for(var i = 0; i < this.inventory.length; i++){
+    if(this.inventory[i].consumable){
+      return this.inventory[i];
+    };
+  };
+};
 
 game.getPlayer();

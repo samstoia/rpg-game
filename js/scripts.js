@@ -67,6 +67,10 @@ $("#nameForm").submit(function(){
     game.displayAll();
   });
 
+  $("#useButton").click(function(){
+    character.useItem(character.findConsumable());
+  });
+
   $("#fightButton").click(function(){
     $("#forwardButton").hide();
     $("#backButton").hide()
