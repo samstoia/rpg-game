@@ -33,8 +33,16 @@ var itemActions = [
   " lies nearby."
 ];
 
-// Monster Descriptions
+// Exhibition
+var intro = "You set out from your village, at the urging of the town elders. This is what must be done, if it can be done at all. Your childhood friend and the lord's daughter, Emilie Hillinder, has been taken by the legendary flying beast, Go'Leir. A dragon famous in stories to frighten children, but a name that makes knights shake in their boots. None will come to save the daughter of a lowly lord. And so it has fallen to you. You who are the fastest, strongest, and most clever in your village. Even if youu weren't, she is a friend, and she will not be left to be the dragon's meal.";
 
+var ending = "Go'Leir, the shadow of death and fiery beast that brings only destruction. The beast of all doom lays dead, a miserable corpse of evil glory. Amid the treasure you hear a cry for help, it's the lord's daughter. You rush over to the pile of gold, knocking crowns and coin to the ground, taking hold of the outreached hand. You pull, and then again. Both you and she struggle, but soon she is free.";
+
+var ending2 = "Emilie looks worse for wear, having hid in the dragon's treasure to avoid her fate. She embraces you and holds on tight for several moments. When she lets you go, she reaches for the magic sword and looks at it, and then to the dead Go'Leir. Something in her has awoken, the same thing that awoke in you when she was taken.";
+
+var ending3 = "Maybe together, the world doesn't have to be such a bleak place."
+
+// Monster Descriptions
 var monsterOgre = "An ugly sight of a one-eyed ogre stomps in front of you. He gurgles and belches, picking at the empty socket of his eye. Despite seeming worse for wear, he is armed with a bloodied club and ready to smash you.";
 
 var monsterTroll = "You are surprised as a large troll jumps from out of the trees, roaring out at you. Her limber form is covered in makeshift leather armor, though her giant ax looks made for her size. It also looks made to cleave travelers like you into small edible pieces.";
@@ -68,11 +76,15 @@ var eventCroneComplete = "'My, my, this staff is perfect! Exactly what I needed!
 
 var eventTownRest = "You feel worn, the day has been long. You find a suitable place to take a short rest and tend to your wounds. One of the townsfolk offers you food and medicine, though it’s not much. You feel welcomed in this far away hamlet that knows the dragon’s ire all too well.";
 
-var eventWizardSave = "You save the man. He's happy.";
+var eventWizardSave = "The troll lays dead, and from near a tree you hear a man yell for help. As you rush over, you see an old robed man with a long magenta beard. He's struggling in bindings, desperately wanting to be freed. When you approach, he looks up at you with great glee.";
 
-var eventWizardFree = "You untie him. He mentions a healing spring.";
+var eventWizardTalk = "'Praise the skies! Praise the stars! Praise the heliopause! I am saved!' He's estastic at the concept of being set free. Will you untie him?"
 
-var eventWizardLeave = "You leave the man. He curses you with donkey ears.";
+var eventWizardFree = "You lean down and start to untie the squirming old man. He gets up and brushes off his robes and thanks you profusely, over and over again. He literally owes you his life, and he does check his pockets, but gives a big shrug.";
+
+var eventWizardResponse = "'I have no item to give you hero, but I can tell you of a precious watersource on the mountain ahead, somewhere near the dragon's lair.' And with that, he takes his leave from you.'"
+
+var eventWizardLeave = "You leave the man tied up. He curses you with pure stupidity.";
 
 var eventWizardSummit = "You meet the old man again, he's a wizard Harry.";
 
