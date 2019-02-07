@@ -1,12 +1,12 @@
 var map = game.gameMap;
 var character = game.characters[0]
-map[4].spawnMonster(2);
+map[4].spawnMonster(0);
 map[6].spawnMonster(1);
+map[7].spawnMonster(2);
 map[9].spawnMonster(3);
-map[8].spawnMonster(0);
-map[7].spawnMonster(4);
-map[11].spawnMonster(5)
+map[11].spawnMonster(4)
 map[5].spawnItem(4);
+map[7].spawnItem(4);
 map[2].spawnFriendly(0);
 map[12].spawnFriendly(1);
 map[6].spawnFriendly(2);
