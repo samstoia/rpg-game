@@ -34,25 +34,31 @@ var itemActions = [
 ];
 
 // Location Descriptions, Main and Array
-var forestMainDesc = "";
+var mapOneStart = "From all directions you stand amid dense columns of trees, many with great roots that are blanketed with old dry leaves and pine needles. The uneven terrain makes it difficult even for experienced travelers to get a proper foothold. There is a faint path, scattered with pebbles sunk into the dirt, this road too is uneven but at least it’s been well trailed. You cannot go back from here, you know you must go forward.";
 
-var forestDescriptions = "";
+var mapTwoClearing = "A small field surrounded by trees, a mix of those trampled by the dragon and those that still stand proud. The abundant tall grass hides the small fauna and unusual flora, with patches of the grass crushed in the shape of a dragon’s clawed foot.  The road is raised through the clearing, making it easy to traverse.";
 
-var townMainDesc = "";
+var mapThreeForest = "From the clearing the groupings of trees get closer together, with bright rays of the sun coming through the branches. It’s strange to think that a dragon had trailed through here only a short while ago. The fallen, rotting trees are perhaps the only sign of its presence, as even the natural world bows to the dragon’s forceful will.";
 
-var townDescriptions = "";
+var mapFourForest = "A small creek runs between the crevices of the tree bases, wearing away the dirt and sand to show the girth of these old roots. The water crosses the worn path, pushing along twigs and mud against the road, and you think few travel this way. Ahead is the wooden palisades of a small town, the only seed of civilization for miles around.";
 
-var caveMainDesc = "";
+var mapFiveTown = "This gated communal has seen much strife, some buildings are scorched while others are left in ruin. Yet the people seem content, even happy, as children play in the town square and the little market bustles with business. Despite the scars left by the dragon, this town has persevered and steeled itself. A testament to the citizens here.";
 
-var caveDescriptions = "";
+var mapSixTown = "From the town you return to the forest along a road made of stone, though it is worn and ancient. It trails towards the hillsides away from the town, scattered stone foundations reveal the history of this land and all that has been lost. The view of the township and the safety its simple walls gets further from you, and soon you are fending for yourself once more.";
 
-var mountainsideMainDesc = "";
+var mapSevenHill = "The forest begins to slope upwards, and ahead is the the range of mountains known to be the home for creatures of every horror. And atop the hills is the dragon’s mountain, a towering stone mountain, a suitable throne for a monster who claims dominance over all others. The hike will be long and wearing, yet this journey must end, with the slaying of the fire breathing beast.";
 
-var mountainsideDescriptions = "";
+var mapEightLake = "You come to the shore of an alpine lake, admiring the serenity of the scene. You can see the opening of a cave behind the waterfall that feeds the alpine pool. Despite the calm of the lake and surrounding forest, you know that ahead will be full of hardship, a challenge worthy of a hero.";
 
-var springsMainDesc = "";
+var mapNineCavern = "The stink of rotting flesh causes you to retch as you can almost taste the putrid air of the cavern. Far above the entrance, up a crooked and worn to rubble stairway is a dim flickering light. You can only surmise that the lair of the dragon is there, made evident by the litter of corpses on the stairs, even impaled into rocks on the wall. This is a tomb of would-be heroes that fell to the dragon and its minions.";
 
-var springsDescriptions = "";
+var mapTenCliff = "Despite the beauty of the forested land and gentle hills that are laid out across the horizon, you feel greatly unnerved. Bitterly cold wind hisses in your ear, urging you to return the way you came down below. The only other way to go, is up further, scaling the rocky cliffs and untouched paths towards the summit above. Were you to fall from this height, no one would even hear the echo of your screams.";
+
+var mapElevenLair = "Bones are strew throughout this enormous cavern, much of which seemed to have been carved out of the stone. Surrounded by the armaments of questing knights is a misshapen, great iron brazier, bright flame bursting from it in a wild flicker. The fire illuminates the far side of the chamber, a portion of the cave dug out by giant claws and filled with enough treasure to make a king faint.";
+
+var mapTwelveSummit = "The heavy mist rests on the peaks of the mountain range, and from atop this great summit you feel a deep invigoration. The world is far beneath your very footsteps, down the path where you had climbed from. The plateau is crowned with rough stone, the remains of an old shrine next to the glistening pool of the natural spring there."
+
+var mapTwelveSummitHidden = "You see the outline of a worn stone door, so beaten by the weather that you initially thought it natural. It is in fact, a secret entrance into the dragon’s lair.";
 
 // Descriptive Items
 var bareHandsDesc = "There are tales of great warriors who take down beasts with only their hands, with the strength to tear skull from spine and put an end to the plaguing horrors. Your hands don’t do that, you hit things and it hurts when you do."
