@@ -56,6 +56,18 @@ Game.prototype.displayAll = function(){
   if(!this.characters[0].inCombat){
     this.characterLocation().getExits();
   }
+  if(this.characters[0].inventory[0]){
+    $("#armButton").show();
+  };
+  if(this.characters[0].weapon[1]){
+    $("#disarmButton").show();
+  };
+  if(this.characterLocation().location == 2){
+    $("#talkButton").show();
+  }
+  if(this.characters[0].weapon[1]){
+    $("#disarmButton").show();
+  }
 }
 
 //========================================================
