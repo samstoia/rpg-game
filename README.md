@@ -4,18 +4,19 @@
 |:-----:|:-----:|:-----:|:-----:|
 | [**DA**](https://github.com/dsarbora) | [**MI**](https://github.com/MicaelaDJ) | [**SA**](https://github.com/samstoia) | [**SH**](https://github.com/LondresRi )|
 
-### Project Go'Leir - initiated January 30th, 2019, updated February 7th, 2019
+### Project Go'Leir - initiated January 28th, 2019, updated February 7th, 2019
 #### By Team Dami-Sash
 
 ----------
 
 ## Description
-Go'Leir is a text-based adventure role-playing game designed using HTML and JavaScript, intending to be a tribute to the original adventure games that were the beginning of our modern gaming entertainment. This project was initiated as part of the Epicodus curriculum for the Intro to Programming team week assignment. The game features all original story, flavor text, expandable core mechanics, and artwork.
+Go'Leir is a text-based adventure role-playing game designed using HTML and JavaScript, intending to be a tribute to the original adventure games that were the beginning of our modern gaming entertainment. This project was initiated as part of the Epicodus curriculum for the Intro to Programming team week assignment. The game features original story, flavor text, expandable core mechanics, and artwork.
 
 ## Known Bugs
 
 * UI bug: buttons disappear.
 * UI/JS bug: descriptions do not match up.
+* UI/JS bug: images do not match up.
 
 ## Specifications
 
@@ -64,14 +65,14 @@ Visit one of our [GH-Page hosted sites](https://samstoia.github.io/rpg-game/) su
 
 | Author | GitHub | Email |
 |--------|:------:|:-----:|
-| Dave Sarbora | [dsarbora](https://github.com/dsarbora) |  [dsarbora@gmail.com](mailto:dsarbora@gmail.com) |
+| Dave Sarbora | [dsarbora](https://github.com/dsarbora) |  [dsarbora@gmail.com](mailto:dsarbora@gmail.comhttps://pixabay.com/en/iceland-aurora-borealis-2111811/) |
 | Micaela Jawor | [MicaelaDJ](https://github.com/MicaelaDJ) |  [micaelajawor@yahoo.com](mailto:micaelajawor@yahoo.com) |
 | Sam Stoia | [samstoia](https://github.com/samstoia) |  [samstoia@gmail.com](mailto:samstoia@gmail.com) |
 | Shawn Lunsford | [LondresRi](https://github.com/LondresRi) |  [lunsford.sk@gmail.com](mailto:lunsford.sk@gmail.com) |
 
 ## Credits
 
-Note: While all contributors have made full-stack additions to the code, each pair was designated to _focus_ on front-end and back-end components as shown below. The same applies to the overall project, as all contributors have taken part in all aspects of creating the game, but focused on particular areas.
+Note: While all contributors have made full-stack additions to the code, each pair was designated to _focus_ on front-end and back-end components as shown below. The same applies to the overall project, as all contributors have taken part in all aspects of creating the game, but focused on particular areas. Background images are sourced free for commercial use pictures, credited below.
 
 | | Dave Sarbora | Micaela Jawor | Sam Stoia | Shawn Lunsford |
 |-|:------------:|:-------------:|:---------:|:--------------:|
@@ -89,12 +90,28 @@ Note: While all contributors have made full-stack additions to the code, each pa
 | Front-End | |◈| |◈|
 | Refractoring | | |◈| |
 | **Graphics** |
-| Backgrounds | | | | |
+| Backgrounds | See Below |
 | Characterrs | |◈| | |
 | Icons | |◈| | |
 | **Quality Assurance** |
 | Documentation | | | |◈|
 | Testing |◈|◈|◈| | |
+
+| Graphics - Backgrounds |
+|------------------------|:-:|
+| **File** | **Source** |
+| mapOne | [Pexels](https://pixabay.com/en/dirt-road-forest-landscape-nature-1851241/) |
+| mapTwo | [Republica](https://pixabay.com/en/forest-trees-light-dust-clearing-653448/) |
+| mapThree | [RonaldPlett](https://pixabay.com/en/woods-spooky-dirt-road-moody-road-3402137/) |
+| mapFour | [Wild0ne](https://pixabay.com/en/forest-trees-green-sunlight-road-2424134/) |
+| mapFive | [lecreusois](https://pixabay.com/en/castle-aveyron-castle-of-najac-2822950/) |
+| mapSix | [Free-Photos](https://pixabay.com/en/sunbeam-road-light-landscape-1031201/) |
+| mapSeven | [Free-Photos](https://pixabay.com/en/farm-track-rural-road-field-path-351475/) |
+| mapEight | [Free-Photos](https://pixabay.com/en/mountain-waterfall-trees-nature-984540/) |
+| mapNine | [Morkin](https://pixabay.com/en/stalactites-cave-stalactite-cave-674159/) |
+| mapTen | [Free-Photos](https://pixabay.com/en/cliff-fog-mountain-rock-foggy-918670/) |
+| mapEleven | [Free-Photos](https://pixabay.com/en/cave-rocks-underground-light-690348/) |
+| mapTwelve | [12019](https://pixabay.com/en/iceland-aurora-borealis-2111811/) |
 
 ## Support and contact details
 
