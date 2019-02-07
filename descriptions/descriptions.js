@@ -33,8 +33,55 @@ var itemActions = [
   " lies nearby."
 ];
 
+// Monster Descriptions
+
+var monsterOgre = "An ugly sight of a one-eyed ogre stomps in front of you. He gurgles and belches, picking at the empty socket of his eye. Despite seeming worse for wear, he is armed with a bloodied club and ready to smash you.";
+
+var monsterTroll = "You are surprised as a large troll jumps from out of the trees, roaring out at you. Her limber form is covered in makeshift leather armor, though her giant ax looks made for her size. It also looks made to cleave travelers like you into small edible pieces.";
+
+var monsterSkeleton = "No skin and all bones, the haunted skeleton of a long dead warrior stands ready to take your life and share its misery with you. Its skull is cracked and it’s missing a few ribs, it gestures rudely at you, before charging your way.";
+
+var monsterGolem = "The colossal of a stone warrior who steps with great care, keeping its three green eyes on you. Ornate carvings of letterscript cover its limbs, and with each movement they glimmer with a magical light. Across it’s face is another mark, glowing red, seeming to be carved by a beast’s claw.";
+
+var monsterDragon = "A proud beast with a wide wingspan, each step of its clawed feet sending small tremors through the ground. It’s grayed scales seem in part decayed, and its eyes are full of a fierce rage. Looming above you, it’s sharp fangs bare as it rumbles, the glowing ember of flame coming from its throat. This is the beast of nightmares, this is Go’Leir, the Dragon of All Doom.";
+
+// Event Descriptions and Dialogues
+var eventClearing = "You follow an old trail, finding that it leads through a huddle of half-fallen trees, with little room to squeeze under. As you crouch under the mess of branches, you see a clearing through the brush. A heavy thud and the crunch of a tree trunk stops you in place, as large scaly feet come into your line of view. By the time you remember to breath, you can see it’s hefty spiked tail. It’s a dragon, it’s the dragon you’ve been seeking. Is this your only chance to slay the beast?";
+
+var eventClearingHide = "You hold your breath again, listening for the dragon to walk through the clearing. Soon enough you can hear the sound of its wings flapping, before it lets out a roar and takes to the sky, disappearing from sight within moments.";
+
+var eventClearingCharge = "You charge from your hiding place, and attack the dragon. It turns its head back at you, with great disinterest.";
+
+var eventClearingFight = "Despite your attacks, the dragon grows bored of you, and extends its mighty wings. With a few flaps, it takes to the air and the forceful gust knocks you to the ground. It lets out a roar as it takes to the sky, disappearing from sight within moments.";
+
+var eventClearingFlee = "You realize your attacks do nothing and you bolt back into the thicket of trees. Fortunately the dragon grows bored of you, and extends its mighty wings. With a few flaps, it takes to the air and the forceful gust shakes the trees. It lets out a roar as it takes to the sky, disappearing from sight within moments.";
+
+var eventCroneFirst = "You see an old woman, garbed in blue and gray standing by the road, leaning against one of the trees. Her eyes are downcast, and you can see she is very tired. As you walk near, her gaze rests on you and for an instance you are filled with an intense fear, but she smiles at you and that fear melts away. Very strange.";
+
+var eventCroneTalk = "You step up to the crone and ask if she is alright.<br>'Why yes, I am. It’s a very nice day and I wanted to walk the forest trails so I could listen to the sweet birds. My walking stick is far too heavy though, I wish I had one that was not so heavy.' She says, gesturing to the longsword at her side, the dull blade sticking into the dirt. Her eyes return to you and again she smiles. 'Would you possibly be able to find me something… lighter?'"
+
+var eventCroneYes = "'Oh thank you, you are truly a kind soul.' She says, and you leave her there."
+
+var eventCroneNo = "'Oh… well, I understand. I am just a simple, old woman, in a place you don’t know, in a land you are new to.' The crone laughs softly. 'The best of luck to you, dragon slayer.'"
+
+var eventCroneComplete = "'My, my, this staff is perfect! Exactly what I needed! Thank you kind soul.' She smiles, taking the staff from you. 'Here, you can have this sword. I have no use for it.'"
+
+var eventTownRest = "You feel worn, the day has been long. You find a suitable place to take a short rest and tend to your wounds. One of the townsfolk offers you food and medicine, though it’s not much. You feel welcomed in this far away hamlet that knows the dragon’s ire all too well.";
+
+var eventWizardSave = "You save the man. He's happy.";
+
+var eventWizardFree = "You untie him. He mentions a healing spring.";
+
+var eventWizardLeave = "You leave the man. He curses you with donkey ears.";
+
+var eventWizardSummit = "You meet the old man again, he's a wizard Harry.";
+
+var eventWizardBless = "He makes your sword magic.";
+
+var eventWizardHeal = "He tells you about the healing water and it heals you and it's amazing.";
+
 // Location Descriptions, Main and Array
-var mapOneStart = "From all directions you stand amid dense columns of trees, many with great roots that are blanketed with old dry leaves and pine needles. The uneven terrain makes it difficult even for experienced travelers to get a proper foothold. There is a faint path, scattered with pebbles sunk into the dirt, this road too is uneven but at least it’s been well trailed. You cannot go back from here, you know you must go forward.";
+var mapDesc = "From all directions you stand amid dense columns of trees, many with great roots that are blanketed with old dry leaves and pine needles. The uneven terrain makes it difficult even for experienced travelers to get a proper foothold. There is a faint path, scattered with pebbles sunk into the dirt, this road too is uneven but at least it’s been well trailed. You cannot go back from here, you know you must go forward.";
 
 var mapTwoClearing = "A small field surrounded by trees, a mix of those trampled by the dragon and those that still stand proud. The abundant tall grass hides the small fauna and unusual flora, with patches of the grass crushed in the shape of a dragon’s clawed foot.  The road is raised through the clearing, making it easy to traverse.";
 
