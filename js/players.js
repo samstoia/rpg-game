@@ -12,8 +12,8 @@ function Character(name, hp, damage, strength, dexterity, intelligence, courage,
   this.hiding = hiding,
   this.weapon = [bareHands],
   this.inventory = [],
-  this.inCombat = false,
-  this.quest = false,
+  this.inCombat = !!inCombat,
+  this.quest = !!inCombat,
   this.location = 0,
   this.previousLocations = []
 };
@@ -175,7 +175,7 @@ Character.prototype.loseBonusDamage = function(item){
 };
 
 Character.prototype.drinkPotion = function(item){
-  this.heal(item.healing);
+  this.heal(item.damage);
 }
 
 game.getPlayer();
