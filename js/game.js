@@ -96,5 +96,12 @@ Game.prototype.displayAll = function(){
 
 }
 
+Game.prototype.displayWinScreen = function(){
+  if(this.monsters[4].hp < 1){
+    $("#gameScreen").hide();
+    $("#winScreen").fadeIn();
+  }
+}
+
 //========================================================
 var game = new Game();

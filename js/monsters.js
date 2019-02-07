@@ -38,7 +38,7 @@ Monster.prototype.dropLoot = function(){
       game.characters[0].displayGetButton()
     }
   }
-  else if(game.characterLocation().monsters[0].name == "Troll"){
+  else if(game.characterLocation().monsters[0].name == "Ogre"){
     $("#talkButton").show();
   }
 };
@@ -59,17 +59,15 @@ Monster.prototype.displayMonster = function(){
   };
 };
 
-var caveRat = new Monster("Cave rat", 17, 4);
-var troll = new Monster("Troll", 83, 15);
-var ogre = new Monster("Ogre", 64, 18);
+var goblin = new Monster("Goblin", 64, 18);
+var ogre = new Monster("Ogre", 83, 15);
 var skeleton = new Monster("Skeleton", 35, 9);
-var ogreLord = new Monster("Ogre lord", 109, 17);
+var golem = new Monster("Golem", 109, 17);
 var dragon = new Monster("Dragon", 200, 25)
-game.getMonster(caveRat);
-game.getMonster(troll);
+game.getMonster(goblin);
 game.getMonster(ogre);
 game.getMonster(skeleton);
-game.getMonster(ogreLord);
+game.getMonster(golem);
 game.getMonster(dragon);
 
 function NPC(name, hp, damage, description, action, inventory, location,){
@@ -132,7 +130,7 @@ NPC.prototype.talk = function(output){
 
 var npc = new NPC("crone", 100, 5, "A haggard old ", " waves you to come over.");
 var wizard = new NPC("wizard", 100, 5, "What appears to be a ", " greets you at the mountain top.");
-var captive = new NPC("captive", 100, 5, "A ", " lies tied up behind the troll.");
+var captive = new NPC("captive", 100, 5, "A ", " lies tied up behind the ogre.");
 npc.inventory.push(sword);
 npc.location = 3;
 wizard.location = 12;

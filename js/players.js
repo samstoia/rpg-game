@@ -36,6 +36,7 @@ Character.prototype.fight = function(monster){
   }
   else{
     monster.dropLoot();
+    game.displayWinScreen();
   }
 
 };
