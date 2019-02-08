@@ -124,13 +124,13 @@ NPC.prototype.giveItem = function(){
 }
 
 NPC.prototype.talk = function(output){
-  $("#monsters").text(output);
+  $("#monsters").text(this.name + ": " +output);
 }
 
 
-var npc = new NPC("crone", 100, 5, "A haggard old ", " waves you to come over.");
-var wizard = new NPC("wizard", 100, 5, "What appears to be a ", " greets you at the mountain top.");
-var captive = new NPC("captive", 100, 5, "A ", " lies tied up behind the ogre.");
+var npc = new NPC("Crone", 100, 5, "A haggard old ", " waves you to come over.");
+var wizard = new NPC("Wizard", 100, 5, "What appears to be a ", " greets you at the mountain top.");
+var captive = new NPC("Captive", 100, 5, "A ", " lies tied up behind the ogre.");
 npc.inventory.push(sword);
 npc.location = 3;
 wizard.location = 12;
