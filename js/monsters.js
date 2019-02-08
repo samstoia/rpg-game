@@ -104,7 +104,7 @@ NPC.prototype.checkDead = function(){
 NPC.prototype.displayNPC = function(){
   if(this && !this.checkDead()){
       //$("#fightButton").show();
-      $("#fightLog").append(this.name);
+      //$("#fightLog").append(this.name);
       $("#monsters").append(this.description + this.name.toLowerCase() + this.action+ "<br><br>")
   }
   else if(this && this.checkDead()){
