@@ -179,10 +179,3 @@ h3 {
   font-family: 'Cinzel', serif;
   font-size: 50px;
 }
-#gameScreen {
-  position:fixed;
-  top:0px;
-  bottom:0px;
-  left:0px;
-  right:0px;
-}
