@@ -29,10 +29,10 @@ $("#nameForm").submit(function(){
 });
 
 
-  $("button").hide();
+  //$("button").hide();
   $("#startGame").show();
   $("#submitName").show();
-  game.displayAll();
+  //game.displayAll();
 
   $("#backButton").click(function(){
     character.move();
@@ -144,7 +144,7 @@ $("#nameForm").submit(function(){
       character.getFortified();
       wizard.talk(eventWizardBless);
       character.loseBonusDamage(sword);
-      sword.damage = sword.damage * 2;
+      sword.damage = 20;
       character.addBonusDamage(sword);
       $("#location").text("The wizard beckons you to drink from a spring and fortify your bones. You do so and feel stronger than ever!")
       }

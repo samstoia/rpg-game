@@ -36,6 +36,7 @@ Game.prototype.clearDisplays = function(){
   $("#monsters").text('')
   $("#fightLog").text('')
   $("#items").text('')
+  $("button").hide();
 }
 
 Game.prototype.displayAll = function(){
@@ -128,7 +129,7 @@ Game.prototype.displayAll = function(){
       $("#deadDragon").show()
     };
   };
-  $("#backgroundPicture").text("<img class = '.visual' src = '" + this.characterLocation().imgKey + "'/>")
+  $("#backgroundPicture").html(`<img class = 'visual' src = "${this.characterLocation().imgKey}" />`)
 };
 
 Game.prototype.displayWinScreen = function(){
