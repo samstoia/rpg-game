@@ -17,6 +17,7 @@ Go'Leir is a text-based adventure role-playing game designed using HTML and Java
 * UI bug: buttons disappear.
 * UI/JS bug: descriptions do not match up.
 * UI/JS bug: images do not match up.
+* UI bug: Game does not work on mobile devices.
 
 ## Specifications
 
