@@ -98,16 +98,16 @@ Game.prototype.displayAll = function(){
     if(this.characterLocation().monsters[0].name == "Goblin"){
       $("#goblin").show()
     }
-    else if(this.characterLocation().monsters[1].name == "Goblin"){
+    else if(this.characterLocation().monsters[0].name == "Ogre"){
       $("#ogre").show()
     }
-    else if(this.characterLocation().monsters[2].name == "Goblin"){
+    else if(this.characterLocation().monsters[0].name == "Skeleton"){
       $("#skeleton").show()
     }
-    else if(this.characterLocation().monsters[3].name == "Goblin"){
+    else if(this.characterLocation().monsters[0].name == "Golem"){
       $("#golem").show()
     }
-    else if(this.characterLocation().monsters[4].name == "Goblin"){
+    else if(this.characterLocation().monsters[0].name == "Dragon"){
       $("#dragon").show()
     }
   }
@@ -115,19 +115,20 @@ Game.prototype.displayAll = function(){
     if(this.characterLocation().monsters[0].name == "Goblin"){
       $("#deadGoblin").show()
     }
-    else if(this.characterLocation().monsters[1].name == "Goblin"){
+    else if(this.characterLocation().monsters[0].name == "Ogre"){
       $("#deadOgre").show()
     }
-    else if(this.characterLocation().monsters[2].name == "Goblin"){
+    else if(this.characterLocation().monsters[0].name == "Skeleton"){
       $("#deadSkeleton").show()
     }
-    else if(this.characterLocation().monsters[3].name == "Goblin"){
+    else if(this.characterLocation().monsters[0].name == "Golem"){
       $("#deadGolem").show()
     }
-    else if(this.characterLocation().monsters[4].name == "Goblin"){
+    else if(this.characterLocation().monsters[0].name == "Dragon"){
       $("#deadDragon").show()
     };
   };
+  $("#backgroundPicture").text("<img class = '.visual' src = '" + this.characterLocation().imgKey + "'/>")
 };
 
 Game.prototype.displayWinScreen = function(){
